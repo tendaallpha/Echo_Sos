@@ -1,0 +1,14 @@
+
+squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ª›šÓúÿÿÿÿHÈ
+RMINORZ
+CODE_SMELL
+Msquid:S1451"&Add or update the header of this file.HÅ
+RBLOCKERZ
+CODE_SMELL
+Š"squid:LeftCurlyBraceStartLineCheck
+"AMove this left curly brace to the beginning of next line of code.(Âú„üÿÿÿÿHÆ
+RMINORZ
+CODE_SMELL
+ksquid:S00105"EReplace all tab characters in this file by sequences of white-spaces.HÇ
+RMINORZ
+CODE_SMELL

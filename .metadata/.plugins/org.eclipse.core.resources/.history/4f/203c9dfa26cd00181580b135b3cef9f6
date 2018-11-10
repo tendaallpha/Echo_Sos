@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<changeSet id="first" author="allpha">
+		<!-- table of articles -->
+		<createTable tableName="article">
+			<column name="id_article" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="title" type="varchar(100)" />
+			<column name="content" type="varchar(20000)" />
+			<column name="color" type="varchar(10)" />
+			<column name="love" type="Integer" defaultValue="0" />
+			<column name="date" type="varchar(20)" />
+			<column name="ownerarticle" type="Integer" />
+		</createTable>
+
+		<!-- table of comments -->
+		<createTable tableName="comment">
+			<column name="id_comment" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="text" type="varchar(100)" />
+			<column name="propritaire" type="Integer" />
+		</createTable>
+
+		<!-- table of planning -->
+		<createTable tableName="planning">
+			<column name="id_planning" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="timeb" type="varchar(10)" />
+			<column name="timee" type="varchar(10)" />
+			<column name="acmonday" type="varchar(30)" />
+			<column name="actursday" type="varchar(30)" />
+			<column name="acwednesday" type="varchar(30)" />
+			<column name="acthursday" type="varchar(30)" />
+			<column name="acfriday" type="varchar(30)" />
+			<column name="acsaturday" type="varchar(30)" />
+			<column name="acsunday" type="varchar(30)" />
+		</createTable>
+
+		<!-- table of account -->
+		<createTable tableName="account">
+			<column name="id_account" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="cname" type="varchar(30)" />
+			<column name="ccity" type="varchar(20)" />
+			<column name="ccreatingdate" type="varchar(20)" />
+			<column name="cphone" type="Integer" />
+			<column name="cvalidation" type="varchar(30)" />
+			<column name="pfirstname" type="varchar(30)" />
+			<column name="pphone" type="Integer" />
+			<column name="psex" type="varchar(20)" />
+			<column name="plastname" type="varchar(20)" />
+			<column name="cpassword" type="varchar(20)" />
+			<column name="status" type="varchar(20)" />
+		</createTable>
+		
+		<!-- table of mail -->
+		<createTable tableName="mail">
+			<column name="id_mail" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="date_sended" type="varchar(20)" />
+			<column name="date_received" type="varchar(20)" />
+			<column name="content" type="varchar(20000)" />
+			<column name="sendermail" type="Integer" />
+		</createTable>
+
+		<addForeignKeyConstraint
+			constraintName="comment_article" referencedTableName="article"
+			referencedColumnNames="id_article" baseTableName="comment"
+			baseColumnNames="propritaire" />
+
+		<addForeignKeyConstraint
+			constraintName="article_account" referencedTableName="account"
+			referencedColumnNames="id_account" baseTableName="article"
+			baseColumnNames="ownerarticle" />
+
+		<addForeignKeyConstraint
+			constraintName="mail_account" referencedTableName="account"
+			referencedColumnNames="id_account" baseTableName="mail"
+			baseColumnNames="sendermail" />
+
+
+		<!-- <sqlFile path="echoSos1.sql" relativeToChangelogFile="true" /> -->
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,17 @@
+package cm.allpha.Echo_Sos;
+
+import java.io.File;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@SpringBootApplication
+@ComponentScan({"cm.allpha.Echo_Sos","cm.allpha.Echo_Sos.Controller"})
+public class EchoSosApplication {
+
+	public static void main(String[] args) {
+		new File(EchoSosAccountController.uploadDirectory).mkdir();
+		SpringApplication.run(EchoSosApplication.class, args);
+	}
+}

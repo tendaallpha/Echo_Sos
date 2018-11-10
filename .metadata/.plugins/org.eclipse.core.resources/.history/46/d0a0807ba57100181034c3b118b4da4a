@@ -1,0 +1,25 @@
+package cm.allpha.Echo_Lbc.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cm.allpha.Echo_Lbc.model.EchoLbcAccount;
+import cm.allpha.Echo_Lbc.persistence.EchoLbcAccountInterface;
+
+@Service
+public class EchoLbcAccountService {
+
+	@Autowired
+	private EchoLbcAccountInterface accountInterface;
+
+	public List<EchoLbcAccount> getAllAccount() {
+		return accountInterface.findAll();
+	}
+
+	public void addAccount(EchoLbcAccount account) {
+		accountInterface.save(account);
+	}
+
+}

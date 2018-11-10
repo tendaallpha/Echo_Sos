@@ -1,0 +1,20 @@
+package cm.allpha.Echo_Sos.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cm.allpha.Echo_Sos.model.EchoSosChildren;
+import cm.allpha.Echo_Sos.persistence.EchoLbcChildrenInterface;
+
+@Service
+public class EchoLbcChildrenService {
+
+	@Autowired
+	private EchoLbcChildrenInterface childrenInterface;
+
+	public List<EchoSosChildren> getAllChildren() {
+		return childrenInterface.findAll();
+	}
+}

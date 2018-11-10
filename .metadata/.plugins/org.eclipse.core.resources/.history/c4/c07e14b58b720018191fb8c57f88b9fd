@@ -1,0 +1,78 @@
+package cm.allpha.Echo_Sos.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "message")
+public class EchoLbcMessage {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id_message;
+	private String date_sended;
+	private String date_received;
+	private String message;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_account", name = "owner")
+	private EchoSosAccount owner;
+
+	public EchoLbcMessage() {
+	}
+
+	public EchoLbcMessage(int id_message, String date_sended, String date_received, String message,
+			EchoSosAccount owner) {
+		super();
+		this.id_message = id_message;
+		this.date_sended = date_sended;
+		this.date_received = date_received;
+		this.message = message;
+		this.owner = owner;
+	}
+
+	public int getId_message() {
+		return id_message;
+	}
+
+	public void setId_message(int id_message) {
+		this.id_message = id_message;
+	}
+
+	public String getDate_sended() {
+		return date_sended;
+	}
+
+	public void setDate_sended(String date_sended) {
+		this.date_sended = date_sended;
+	}
+
+	public String getDate_received() {
+		return date_received;
+	}
+
+	public void setDate_received(String date_received) {
+		this.date_received = date_received;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public EchoSosAccount getOwner() {
+		return owner;
+	}
+
+	public void setOwner(EchoSosAccount owner) {
+		this.owner = owner;
+	}
+
+}

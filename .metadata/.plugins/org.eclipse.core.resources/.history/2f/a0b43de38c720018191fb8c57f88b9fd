@@ -1,0 +1,29 @@
+package cm.allpha.Echo_Sos.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cm.allpha.Echo_Sos.model.EchoSosArticle;
+import cm.allpha.Echo_Sos.persistence.EchoSosArticleInterface;
+
+@Service
+public class EchoLbcArticleService {
+
+	@Autowired
+	private EchoSosArticleInterface echoSosArticleInterface;
+
+	public List<EchoSosArticle> getAllArticles() {
+		return echoSosArticleInterface.findAll();
+	}
+
+	public EchoSosArticle addArticle(EchoSosArticle echoSosArticle) {
+		return echoSosArticleInterface.save(echoSosArticle);
+	}
+
+	public EchoSosArticle getIdArticle(Integer id) {
+		return echoSosArticleInterface.findById(id).get();
+	}
+
+}

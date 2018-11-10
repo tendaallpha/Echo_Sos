@@ -1,0 +1,7 @@
+
+asquid:S2699"-Add at least one assertion to this test case.(“…ÐÇþÿÿÿÿHÝRBLOCKERZ
+CODE_SMELL
+„squid:S3578"RRename this method name to match the regular expression: '^test[A-Z][a-zA-Z0-9]*$'(“…ÐÇþÿÿÿÿHÞRMINORZ
+CODE_SMELL
+Ásquid:S3577"ŽRename class "EchoSosApplicationTests" to match the regular expression: '^((Test|IT)[a-zA-Z0-9]+|[A-Z][a-zA-Z0-9]*(Test|IT|TestCase|ITCase))$'(àéÒÀøÿÿÿÿHßRMINORZ
+CODE_SMELL

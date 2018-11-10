@@ -1,0 +1,18 @@
+.less.active .button-read-less {
+	display: none;
+	margin-left: 120px;
+}
+
+.less.active .button-read-more {
+	display: block;
+	margin-left: 120px;
+}
+
+.more {
+	margin-top: 10px;
+}
+
+.more p {
+	margin: 0;
+	padding: 0;
+}

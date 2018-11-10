@@ -1,0 +1,53 @@
+
+Œ"squid:LeftCurlyBraceStartLineCheckL"AMove this left curly brace to the beginning of next line of code.(Ûƒñ™8äÇ§ì,HÂ
+RMINORZ
+CODE_SMELL
+Œ"squid:LeftCurlyBraceStartLineCheckH"AMove this left curly brace to the beginning of next line of code.(¾ıš†8äÇ§ì,H³	RMINORZ
+CODE_SMELL
+Msquid:S1451"&Add or update the header of this file.H‘	RBLOCKERZ
+CODE_SMELL
+squid:S001170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë÷ŞÉH—	RMINORZ
+CODE_SMELL
+|squid:S001000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë÷ŞÉH 	RMINORZ
+CODE_SMELL
+Š"squid:LeftCurlyBraceStartLineCheck@"AMove this left curly brace to the beginning of next line of code.(ò‡˜ÁøÿÿÿÿH§	RMINORZ
+CODE_SMELL
+†squid:S00117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú÷º“8äÇ§ì,HÅ	RMINORZ
+CODE_SMELL
+…"squid:LeftCurlyBraceStartLineCheck,"AMove this left curly brace to the beginning of next line of code.( éÒ±Hš	RMINORZ
+CODE_SMELL
+Š"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(¹¶‡ûıÿÿÿÿHƒ	RMINORZ
+CODE_SMELL
+Š"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(¢ÊÔğûÿÿÿÿH	RMINORZ
+CODE_SMELL
+[squid:S2143Q")Use the Java 8 Date and Time API instead.(”Ç©šùÿÿÿÿH¥	RMAJORZ
+CODE_SMELL
+Msquid:S00113"'Add a new line at the end of this file.HıRMINORZ
+CODE_SMELL
+ssquid:S3340"?Reorder annotation arguments to match the order of declaration.(ñ³ŒĞ8äÇ§ì,HË	RMINORZ
+CODE_SMELL
+ˆsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥‚‰Hª	RMINORZ
+CODE_SMELL
+ssquid:S3340"?Reorder annotation arguments to match the order of declaration.(×‡ŞÏ8äÇ§ì,HÈ	RMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck#"AMove this left curly brace to the beginning of next line of code.(ğø¢şÿÿÿÿ8äÇ§ì,H­	RMINORZ
+CODE_SMELL
+…"squid:LeftCurlyBraceStartLineCheck<"AMove this left curly brace to the beginning of next line of code.(†äİH‰	RMINORZ
+CODE_SMELL
+…"squid:LeftCurlyBraceStartLineCheck4"AMove this left curly brace to the beginning of next line of code.(Šò–¹H”	RMINORZ
+CODE_SMELL
+Š"squid:LeftCurlyBraceStartLineCheck8"AMove this left curly brace to the beginning of next line of code.(èÜ›ÿÿÿÿÿH	RMINORZ
+CODE_SMELL
+|squid:S00100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( éÒ±H¢	RMINORZ
+CODE_SMELL
+Œ"squid:LeftCurlyBraceStartLineCheckP"AMove this left curly brace to the beginning of next line of code.(¡ºğÑ8äÇ§ì,H»	RMINORZ
+CODE_SMELL
+ksquid:S00105"EReplace all tab characters in this file by sequences of white-spaces.HŒ	RMINORZ
+CODE_SMELL
+Œ"squid:LeftCurlyBraceStartLineCheckD"AMove this left curly brace to the beginning of next line of code.(æõ–•8äÇ§ì,HÁ
+RMINORZ
+CODE_SMELL
+…"squid:LeftCurlyBraceStartLineCheck0"AMove this left curly brace to the beginning of next line of code.(ë÷ŞÉH†	RMINORZ
+CODE_SMELL
+squid:S00116"RRename this field "id_mail" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÅ¿GH	RMINORZ
+CODE_SMELL

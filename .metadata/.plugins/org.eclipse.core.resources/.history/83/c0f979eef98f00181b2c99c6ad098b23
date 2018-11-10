@@ -1,0 +1,37 @@
+package cm.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import cm.model.Eleve;
+import cm.service.EleveService;
+
+@Controller
+public class ElevControlleur {
+
+	@Autowired
+	private EleveService eleveService;
+
+	@GetMapping("index")	
+	public String setName(Model model) {
+		Eleve eleve = new Eleve();
+		model.addAttribute("inscription", eleve);
+		return "inscription";
+	}
+	
+	@PostMapping("inscription")
+	public String ajoutEleve(@RequestParam String nom,
+			@RequestParam String nom,
+			@RequestParam String prenom,
+			@RequestParam String age,
+			@RequestParam String niveau,
+			@RequestParam String matricule,
+			@RequestParam String formation){ {
+		return ;
+	}
+	
+}

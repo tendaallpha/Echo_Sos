@@ -1,0 +1,14 @@
+package cm.allpha.Echo_Sos.config;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.security.servlet.WebSecurityEnablerConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.web.config.EnableSpringDataWebSupport;
+
+@Configuration
+@ConditionalOnBean
+public class SecurityConfig extends WebSecurityEnablerConfiguration {
+	
+	
+}

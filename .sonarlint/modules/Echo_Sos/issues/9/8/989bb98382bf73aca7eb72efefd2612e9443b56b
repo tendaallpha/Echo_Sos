@@ -1,0 +1,17 @@
+
+Tsquid:S1451"&Add or update the header of this file.8гршощ,HєRBLOCKERZ
+CODE_SMELL
+Иsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(┤н·█HїRMINORZ
+CODE_SMELL
+qsquid:S4288"=Remove this annotation and use constructor injection instead.(ъц─▐8гршощ,HЎRMAJORZ
+CODE_SMELL
+С"squid:LeftCurlyBraceStartLineCheck$"AMove this left curly brace to the beginning of next line of code.(ЎМ╦А     8гршощ,HўRMINORZ
+CODE_SMELL
+rsquid:S00105"EReplace all tab characters in this file by sequences of white-spaces.8гршощ,H∙RMINORZ
+CODE_SMELL
+ssquid:S1258":Add a constructor to the class, or provide default values.(▌Р╪Э°    8гршощ,HЄRMAJORZ
+CODE_SMELL
+С"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(▌Р╪Э°    8гршощ,H°RMINORZ
+CODE_SMELL
+С"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(▐вВ▌°    8гршощ,H·RMINORZ
+CODE_SMELL

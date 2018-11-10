@@ -1,0 +1,59 @@
+package cm.allpha.Echo_Lbc.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import cm.allpha.Echo_Lbc.model.EchoLbcArticle;
+import cm.allpha.Echo_Lbc.model.EchoLbcComment;
+import cm.allpha.Echo_Lbc.service.EchoLbcArticleService;
+
+@Controller
+public class DefaultController {
+
+	@Autowired
+	private EchoLbcArticleService echoLbcArticleService;
+
+	@GetMapping("authentification")
+	public String getAuthentification() {
+		return "page-login";
+	}
+
+	@GetMapping("notification")
+	public String getArticle(Model model) {
+		model.addAttribute("articles", echoLbcArticleService.getAllArticles());
+		return "notification";
+	}
+
+	@GetMapping("view-Article/{id}")
+	public String getViewArticle(@PathVariable("id") Integer id, Model model) {
+		EchoLbcArticle echoLbcArticle1 = echoLbcArticleService.getIdArticle(id);
+		model.addAttribute("articles", echoLbcArticle1);
+		return "view-Article";
+	}
+
+	@PostMapping("view-Article/{id}")
+	public String getViewArticle(@PathVariable("id") Integer id, @RequestParam("comment") String comment) {
+
+		EchoLbcArticle echoLbcArticle1 = echoLbcArticleService.getIdArticle(id);
+		EchoLbcComment addcomments = new EchoLbcComment(null, comment, echoLbcArticle1);
+		echoLbcArticle1.getComments().add(addcomments);
+		echoLbcArticleService.addArticle(echoLbcArticle1);
+		return "redirect:/view-Article/" + id;
+	}
+
+	@GetMapping("incrementLove/{id}")
+	public String getViewArticle(@PathVariable("id") Integer id) {
+		EchoLbcArticle echoLbcArticle1 = echoLbcArticleService.getIdArticle(id);
+		echoLbcArticle1.addLove();
+		echoLbcArticle1.equals(1);
+		echoLbcArticleService.addArticle(echoLbcArticle1);
+		return "redirect:/view-Article/" + id;
+
+	}
+}

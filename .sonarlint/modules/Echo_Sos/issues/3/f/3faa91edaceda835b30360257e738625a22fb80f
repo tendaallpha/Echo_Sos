@@ -1,0 +1,33 @@
+
+Msquid:S1451"&Add or update the header of this file.HŸ
+RBLOCKERZ
+CODE_SMELL
+Š"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(œÂëşşÿÿÿÿH™
+RMINORZ
+CODE_SMELL
+jsquid:S4288"=Remove this annotation and use constructor injection instead.(êæÄŞHœ
+RMAJORZ
+CODE_SMELL
+bsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ûŠã±üÿÿÿÿH¡
+RMAJORZBUG
+ˆsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…Ü¹ÌH›
+RMINORZ
+CODE_SMELL
+Š"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(ĞÊ™ÉúÿÿÿÿHš
+RMINORZ
+CODE_SMELL
+Œ"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(Ö½œ8´áé§ì,H¢
+RMINORZ
+CODE_SMELL
+ksquid:S00105"EReplace all tab characters in this file by sequences of white-spaces.H
+RMINORZ
+CODE_SMELL
+…"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(£ÕŞİH
+RMINORZ
+CODE_SMELL
+lsquid:S1258":Add a constructor to the class, or provide default values.(ĞÊ™ÉúÿÿÿÿH 
+RMAJORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(¢ûò¤ıÿÿÿÿ8´áé§ì,H£
+RMINORZ
+CODE_SMELL

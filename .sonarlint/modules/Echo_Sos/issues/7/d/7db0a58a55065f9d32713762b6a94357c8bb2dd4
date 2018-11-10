@@ -1,0 +1,93 @@
+
+yjavascript:S2259¹"KTypeError can be thrown as "pointPosition" might be null or undefined here.(ÉÂÏøýÿÿÿÿRMAJORZBUG
+|javascript:S2589Ø"LRefactor this code so that this expression does not always evaluate to true.(™ãÌÔRMAJORZ
+CODE_SMELL
+|javascript:S2589å"LRefactor this code so that this expression does not always evaluate to true.(™ãÌÔRMAJORZ
+CODE_SMELL
+|javascript:S2589ò"LRefactor this code so that this expression does not always evaluate to true.(¾Î»øRMAJORZ
+CODE_SMELL
+{javascript:S28140"GRename "height" as this name is already used in declaration at line 41.(äòôÀýÿÿÿÿRMAJORZ
+CODE_SMELL
+ujavascript:S2814/"FRename "width" as this name is already used in declaration at line 40.(ï¹°RMAJORZ
+CODE_SMELL
+…javascript:S3523â"OReview this "Function" call and make sure its arguments are properly validated.(ŸÉŠ¶RCRITICALZVULNERABILITY
+wjavascript:UnusedVariable¯">Remove the declaration of the unused 'animationLoop' variable.(Â¶ÛèRMINORZ
+CODE_SMELL
+{javascript:UnusedVariableÕ"BRemove the declaration of the unused 'getAngleFromPoint' variable.(…£¼«RMINORZ
+CODE_SMELL
+|javascript:UnusedVariableý">Remove the declaration of the unused 'findNextWhere' variable.(Í˜ùŒþÿÿÿÿRMINORZ
+CODE_SMELL
+zjavascript:UnusedVariableê"<Remove the declaration of the unused 'splineCurve' variable.(Ë½ÖòøÿÿÿÿRMINORZ
+CODE_SMELL
+wjavascript:UnusedVariableÃ	">Remove the declaration of the unused 'easingDecimal' variable.(Ðá€ƒRMINORZ
+CODE_SMELL
+sjavascript:UnusedVariable"6Remove the declaration of the unused 'chart' variable.(ËÑŸûÿÿÿÿRMINORZ
+CODE_SMELL
+{javascript:UnusedVariable‰"BRemove the declaration of the unused 'findPreviousWhere' variable.(€ûüÚRMINORZ
+CODE_SMELL
+‚javascript:UnusedVariableÄ"DRemove the declaration of the unused 'getRelativePosition' variable.(¤ÐòÿùÿÿÿÿRMINORZ
+CODE_SMELL
+}javascript:UnusedVariable‹"?Remove the declaration of the unused 'maxWidthRadius' variable.(æ¨ëàøÿÿÿÿRMINORZ
+CODE_SMELL
+€javascript:UnusedVariableŒ"BRemove the declaration of the unused 'firstRotatedWidth' variable.(˜™ÌýÿÿÿÿRMINORZ
+CODE_SMELL
+}javascript:UnusedVariableú"?Remove the declaration of the unused 'generateLabels' variable.(ÄŽ‘ÈÿÿÿÿÿRMINORZ
+CODE_SMELL
+tjavascript:UnusedVariableò"6Remove the declaration of the unused 'where' variable.(ÓÕ®òúÿÿÿÿRMINORZ
+CODE_SMELL
+xjavascript:UnusedVariable†"?Remove the declaration of the unused 'getMaximumSize' variable.(Èù£¼RMINORZ
+CODE_SMELL
+rjavascript:UnusedVariableý"4Remove the declaration of the unused 'ctx' variable.(ôëÏ¸øÿÿÿÿRMINORZ
+CODE_SMELL
+rjavascript:UnusedVariable¹":Remove the declaration of the unused 'isRotated' variable.(Ïÿâ/RMINORZ
+CODE_SMELL
+tjavascript:UnusedVariableì";Remove the declaration of the unused 'bindEvents' variable.(¯™ÜRMINORZ
+CODE_SMELL
+‚javascript:UnusedVariableÿ"DRemove the declaration of the unused 'calculateScaleRange' variable.(Ø’†œøÿÿÿÿRMINORZ
+CODE_SMELL
+rjavascript:UnusedVariable¼"4Remove the declaration of the unused 'cap' variable.(€ÞƒƒûÿÿÿÿRMINORZ
+CODE_SMELL
+tjavascript:S1854Õ"DRemove this useless assignment to local variable "getAngleFromPoint"(…£¼«RMAJORZ
+CODE_SMELL
+sjavascript:S1854ê">Remove this useless assignment to local variable "splineCurve"(Ë½ÖòøÿÿÿÿRMAJORZ
+CODE_SMELL
+ujavascript:S1854ý"@Remove this useless assignment to local variable "findNextWhere"(Í˜ùŒþÿÿÿÿRMAJORZ
+CODE_SMELL
+mjavascript:S1854ò"8Remove this useless assignment to local variable "where"(ÓÕ®òúÿÿÿÿRMAJORZ
+CODE_SMELL
+{javascript:S1854Ä"FRemove this useless assignment to local variable "getRelativePosition"(¤ÐòÿùÿÿÿÿRMAJORZ
+CODE_SMELL
+mjavascript:S1854ì"=Remove this useless assignment to local variable "bindEvents"(¯™ÜRMAJORZ
+CODE_SMELL
+kjavascript:S1854¼"6Remove this useless assignment to local variable "cap"(€ÞƒƒûÿÿÿÿRMAJORZ
+CODE_SMELL
+vjavascript:S1854ú"ARemove this useless assignment to local variable "generateLabels"(ÄŽ‘ÈÿÿÿÿÿRMAJORZ
+CODE_SMELL
+tjavascript:S1854‰"DRemove this useless assignment to local variable "findPreviousWhere"(€ûüÚRMAJORZ
+CODE_SMELL
+{javascript:S1854ÿ"FRemove this useless assignment to local variable "calculateScaleRange"(Ø’†œøÿÿÿÿRMAJORZ
+CODE_SMELL
+pjavascript:S1854¯"@Remove this useless assignment to local variable "animationLoop"(Â¶ÛèRMAJORZ
+CODE_SMELL
+qjavascript:S1854†"ARemove this useless assignment to local variable "getMaximumSize"(Èù£¼RMAJORZ
+CODE_SMELL
+mjavascript:S18540"9Remove this useless assignment to local variable "height"(äòôÀýÿÿÿÿRMAJORZ
+CODE_SMELL
+gjavascript:S1854/"8Remove this useless assignment to local variable "width"(ï¹°RMAJORZ
+CODE_SMELL
+ljavascript:S1854"8Remove this useless assignment to local variable "chart"(ËÑŸûÿÿÿÿRMAJORZ
+CODE_SMELL
+ijavascript:S1854Ó"4Remove this useless assignment to local variable "s"(À¨ê‹úÿÿÿÿRMAJORZ
+CODE_SMELL
+ijavascript:S1854à"4Remove this useless assignment to local variable "s"(À¨ê‹úÿÿÿÿRMAJORZ
+CODE_SMELL
+ijavascript:S1854í"4Remove this useless assignment to local variable "s"(À¨ê‹úÿÿÿÿRMAJORZ
+CODE_SMELL
+pjavascript:S1854Ã	"@Remove this useless assignment to local variable "easingDecimal"(Ðá€ƒRMAJORZ
+CODE_SMELL
+njavascript:S1854–">Remove this useless assignment to local variable "lastRotated"(àžú½RMAJORZ
+CODE_SMELL
+kjavascript:S1854¹"<Remove this useless assignment to local variable "isRotated"(Ïÿâ/RMAJORZ
+CODE_SMELL
+kjavascript:S1854ý"6Remove this useless assignment to local variable "ctx"(ôëÏ¸øÿÿÿÿRMAJORZ
+CODE_SMELL

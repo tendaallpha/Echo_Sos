@@ -1,0 +1,20 @@
+package cm.allpha.Echo_Sos.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cm.allpha.Echo_Sos.model.EchoSosMessage;
+import cm.allpha.Echo_Sos.persistence.EchoLbcMessageInterface;
+
+@Service
+public class EchoLbcMessageService {
+	
+	@Autowired
+	private EchoLbcMessageInterface echoLbcMessageInterface;
+	
+	public List<EchoSosMessage> getAllMessage() {
+		return echoLbcMessageInterface.findAll();
+	}
+}

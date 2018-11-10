@@ -1,0 +1,59 @@
+package cm.allpha.Echo_Sos.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import cm.allpha.Echo_Sos.model.EchoSosAccount;
+import cm.allpha.Echo_Sos.model.EchoSosArticle;
+import cm.allpha.Echo_Sos.model.Role;
+import cm.allpha.Echo_Sos.model.Sex;
+import cm.allpha.Echo_Sos.service.EchoSosAccountService;
+
+@Controller
+public class EchoSosAccountController {
+
+	@Autowired
+	private EchoSosAccountService accountService;
+
+	@GetMapping("inscription")
+	public String getNewAccount(Model model) {
+		EchoSosAccount echoSosAccount = new EchoSosAccount();
+		model.addAttribute("account", echoSosAccount);
+		return "inscription";
+	}
+
+	@PostMapping(value = "inscription")
+	public String addAccount(@ModelAttribute EchoSosAccount account) {
+		accountService.addAccount(account);
+		return "redirect:/authentification";
+	}
+
+	@GetMapping("personalAccountList")
+	public String getPersonalListAccount(/*@PathVariable("id") Integer id,*/ Model model) {
+//		EchoSosAccount echoSosAccount = accountService.getIdArticle(id);
+//		model.addAttribute("addPersonalAccount", echoSosAccount);
+		EchoSosAccount echoSosAccount = new EchoSosAccount();
+		model.addAttribute("addPersonalAccount", echoSosAccount);
+		return "accounts-list";
+	}
+
+	@PostMapping("addPersonalAccount")
+	public String addPersonalAccount(@ModelAttribute EchoSosAccount personalAccount) {
+		accountService.addAccount(personalAccount);
+		return "redirect:/personalAccountList";
+	}
+
+	@GetMapping("personalAccount")
+	public String getPersonalAccount(Model model) {
+		EchoSosAccount echoSosAccount = new EchoSosAccount();
+		model.addAttribute("addPersonalAccount", echoSosAccount);
+		model.addAttribute("addPersonalAccountRole", Role.values());
+		model.addAttribute("addPersonalAccountSex", Sex.values());
+		return "account";
+	}
+}

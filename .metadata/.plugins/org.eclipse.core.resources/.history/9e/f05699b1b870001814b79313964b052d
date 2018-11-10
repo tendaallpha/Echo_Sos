@@ -1,0 +1,33 @@
+package cm.allpha.Echo_Lbc.service;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cm.allpha.Echo_Lbc.model.EchoLbcArticle;
+import cm.allpha.Echo_Lbc.persistence.EchoLbcArticleInterface;
+
+@Service
+public class EchoLbcArticleService {
+
+	@Autowired
+	private EchoLbcArticleInterface echoLbcArticleInterface;
+
+	public List<EchoLbcArticle> getAllArticles() {
+		return echoLbcArticleInterface.findAll();
+	}
+
+	public EchoLbcArticle addArticle(EchoLbcArticle echoLbcArticle) {
+		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
+		echoLbcArticle.getDate();
+		return echoLbcArticleInterface.save(echoLbcArticle);
+	}
+
+	public EchoLbcArticle getIdArticle(Integer id) {
+		return echoLbcArticleInterface.findById(id).get();
+	}
+
+}

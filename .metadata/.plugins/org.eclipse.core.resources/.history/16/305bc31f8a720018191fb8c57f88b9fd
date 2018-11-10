@@ -1,0 +1,5 @@
+package cm.allpha.Echo_Lbc.model;
+
+public enum Role {
+	Admin, User, Parrain, child;
+}

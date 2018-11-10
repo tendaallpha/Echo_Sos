@@ -1,0 +1,21 @@
+package cm.allpha.Echo_Sos.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "children")
+public class EchoLbcChildren extends EchoLbcPerson {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1621000121689242564L;
+
+	public EchoLbcChildren() {}
+
+	public EchoLbcChildren(int id_person, String name, String firstName, int phone, String town, String sex, String image) {
+		super(id_person, name, firstName, phone, town, sex, image);
+	}
+
+}

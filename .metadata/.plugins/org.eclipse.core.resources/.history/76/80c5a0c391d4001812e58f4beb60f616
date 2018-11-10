@@ -1,0 +1,81 @@
+package cm.allpha.Echo_Sos.controller;
+
+import java.io.IOException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.trace.http.HttpTrace.Principal;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import cm.allpha.Echo_Sos.model.EchoSosAccount;
+import cm.allpha.Echo_Sos.model.Sex;
+import cm.allpha.Echo_Sos.model.Status;
+import cm.allpha.Echo_Sos.service.EchoSosAccountService;
+
+@Controller
+public class EchoSosAccountController {
+
+	@Autowired
+	private EchoSosAccountService accountService;
+	public static String profileDirectry = System.getProperty("user.dir") + "/src/main/resources/static/profileImages";
+
+	@GetMapping("inscription")
+	public String getNewAccount(Model model, Principal principal) {
+	
+		return "inscription";
+	}
+
+	@GetMapping("orphanInscription")
+	public String getNewOrphanAccount(Model model) {
+		model.addAttribute("orphanaccount", new EchoSosAccount());
+		return "orphan-form";
+	}
+
+	@GetMapping("associationInscription")
+	public String getNewHelpAssAccount(Model model) {
+		model.addAttribute("helpassaccount", new EchoSosAccount());
+		return "helpAss-form";
+	}
+
+	@GetMapping("orphanageList")
+	public String getPersonalListAccount(Model model) {
+		model.addAttribute("orphanage", accountService.getAllAccount());
+		return "accounts-list";
+	}
+
+	@PostMapping("addOrphanAccount")
+	public String addPersonalAccount(@ModelAttribute EchoSosAccount orphanAccount,
+			@RequestParam("file") MultipartFile[] files) throws IOException {
+
+		String passinit = orphanAccount.getCpassword();
+		String passencrypt = new BCryptPasswordEncoder().encode(passinit);
+		orphanAccount.setCpassword(passencrypt);
+		
+		accountService.addAccount(files, orphanAccount);
+		return "redirect:/orphanInscription";
+	}
+
+	@GetMapping("personalAccount")
+	public String getPersonalAccount(Model model) {
+		EchoSosAccount echoSosAccount = new EchoSosAccount();
+		model.addAttribute("addPersonalAccount", echoSosAccount);
+		model.addAttribute("addPersonalAccountRole", Status.values());
+		model.addAttribute("addPersonalAccountSex", Sex.values());
+		return "account";
+	}
+
+	@GetMapping("selfpage.html/{id}")
+	public String getSelfpage(@PathVariable("id") Integer id, Model model) {
+		EchoSosAccount account = accountService.getIdAccount(id);
+		model.addAttribute("account", account);
+		return "background";
+	}
+
+}

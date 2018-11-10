@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<changeSet id="first" author="allpha">
+		<!-- table of articles -->
+		<createTable tableName="article">
+			<column name="id_article" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="title" type="varchar(100)" />
+			<column name="content" type="varchar(20000)" />
+			<column name="color" type="varchar(10)" />
+			<column name="love" type="Integer" defaultValue="0" />
+			<column name="date" type="varchar(20)" />
+		</createTable>
+		<!-- table of comments -->
+		<createTable tableName="comment">
+			<column name="id_comment" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="text" type="varchar(100)" />
+			<column name="propritaire" type="Integer" />
+		</createTable>
+		<addForeignKeyConstraint
+			constraintName="comment_article" referencedTableName="article"
+			referencedColumnNames="id_article" baseTableName="comment"
+			baseColumnNames="propritaire" />
+		<!-- table of account -->
+		<createTable tableName="account">
+			<column name="id_account" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="name" type="varchar(50)" />
+			<column name="firstName" type="varchar(50)" />
+			<column name="phone" type="Iteger" />
+			<column name="town" type="varchar(50)" />
+			<column name="sex" type="varchar(50)" />
+			<column name="image" type="varchar(50)" />
+			<column name="login" type="varchar(50)" />
+			<column name="status" type="varchar(50)" />
+			<column name="pwd" type="varchar(50)" />
+		</createTable>
+		<!-- table of messqe -->
+		<createTable tableName="message">
+			<column name="id_message" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="date_sended" type="varchar(15)" />
+			<column name="date_received" type="varchar(15)" />
+			<column name="message" type="varchar(20000)" />
+			<column name="owner" type="Integer" />
+		</createTable>
+		<addForeignKeyConstraint
+			constraintName="message_account" referencedTableName="message"
+			referencedColumnNames="id_account" baseTableName="account"
+			baseColumnNames="owner" />
+
+
+		<!-- <sqlFile path="echoLbc1.sql" relativeToChangelogFile="true" /> -->
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,9 @@
+package cm.allpha.Echo_Sos.persistence;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import cm.allpha.Echo_Sos.model.EchoLbcAccount;
+
+public interface EchoLbcAccountInterface extends JpaRepository<EchoLbcAccount, Integer> {
+
+}

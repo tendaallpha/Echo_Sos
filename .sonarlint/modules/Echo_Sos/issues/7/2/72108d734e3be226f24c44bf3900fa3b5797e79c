@@ -1,0 +1,19 @@
+
+®"squid:ClassVariableVisibilityCheck"[Make childrenprofile a static final constant or non-public and provide accessors if needed.(Òµæİşÿÿÿÿ8ëåìâê,HóRMINORZVULNERABILITY
+ssquid:S1258":Add a constructor to the class, or provide default values.(“ûÛÄùÿÿÿÿ8­Õ‚Üê,H…RMAJORZ
+CODE_SMELL
+qsquid:S4288"=Remove this annotation and use constructor injection instead.(êæÄŞ8­Õ‚Üê,H„RMAJORZ
+CODE_SMELL
+jsquid:S00105"EReplace all tab characters in this file by sequences of white-spaces.H#RMINORZ
+CODE_SMELL
+Œ"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(‘½Ÿ²8­Õ‚Üê,HRMINORZ
+CODE_SMELL
+Œ"squid:LeftCurlyBraceStartLineCheck+"AMove this left curly brace to the beginning of next line of code.(¹£ş8èõäê,H³RMINORZ
+CODE_SMELL
+qsquid:S1444"5Make this "public static childrenprofile" field final(Òµæİşÿÿÿÿ8ëåìâê,HòRMINORZVULNERABILITY
+‘"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(“ûÛÄùÿÿÿÿ8­Õ‚Üê,HƒRMINORZ
+CODE_SMELL
+Lsquid:S1451"&Add or update the header of this file.HRBLOCKERZ
+CODE_SMELL
+‡squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´­úÛH$RMINORZ
+CODE_SMELL

@@ -1,0 +1,124 @@
+package cm.allpha.Echo_Sos.controller;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.trace.http.HttpTrace.Principal;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import cm.allpha.Echo_Sos.model.EchoSosAccount;
+import cm.allpha.Echo_Sos.model.EchoSosArticle;
+import cm.allpha.Echo_Sos.model.EchoSosComment;
+import cm.allpha.Echo_Sos.service.EchoSosAccountService;
+import cm.allpha.Echo_Sos.service.EchoSosArticleService;
+import cm.allpha.Echo_Sos.service.EchoSosPlanningService;
+
+@Controller
+public class EchoSosDefaultController {
+
+	@Autowired
+	private EchoSosArticleService articleService;
+	@Autowired
+	private EchoSosPlanningService planningService;
+	@Autowired
+	private EchoSosAccountService accountService;
+	public static String LOADGALLERY = System.getProperty("user.dir") + "/src/main/resources/static/gallery/";
+
+	@GetMapping("authentification")
+	public String getAuthentification() {
+		return "page-login";
+	}
+
+	@GetMapping("selfpage")
+	public String getSelfpage(Model model) {
+		model.addAttribute("plannings", planningService.getPlanning());
+		return "background";
+	}
+
+	@GetMapping("gallery.html")
+	public String getGallery() {
+		return "gallery";
+	}
+
+	@GetMapping({ "/", "home" })
+	public String getArticle(Model model, Principal principal) {
+		
+		String username = principal.getName();
+
+		EchoSosAccount user = accountService.getByUsername(Integer.parseInt(username));
+		model.addAttribute("user", user);
+		
+		model.addAttribute("articles", articleService.getAllArticles());
+		return "home";
+	}
+
+	@PostMapping("home.com")
+	public String setViewArticleComment(@RequestParam("articleid") Integer articleid,
+			@RequestParam("comment") String comment) {
+		EchoSosArticle article = articleService.getIdArticle(articleid);
+		EchoSosComment addcomments = new EchoSosComment(null, comment, article);
+		article.getComments().add(addcomments);
+		articleService.addArticle(article);
+		return "redirect:/home";
+	}
+
+	@GetMapping("view-Article/{id}")
+	public String getViewArticle(@PathVariable("id") Integer id, Model model) {
+		EchoSosArticle article1 = articleService.getIdArticle(id);
+		model.addAttribute("articles", article1);
+		return "view-Article";
+	}
+
+	@PostMapping("view-Article/{id}")
+	public String setViewArticle(@PathVariable("id") Integer id, @RequestParam("comment") String comment) {
+		EchoSosArticle article1 = articleService.getIdArticle(id);
+		EchoSosComment addcomments = new EchoSosComment(null, comment, article1);
+		article1.getComments().add(addcomments);
+		articleService.addArticle(article1);
+		return "redirect:/view-Article/" + id;
+	}
+
+	@GetMapping("incrementLove/{id}")
+	public String addLove(@PathVariable("id") Integer id) {
+		EchoSosArticle article1 = articleService.getIdArticle(id);
+		article1.addLove();
+		articleService.addArticle(article1);
+		return "redirect:/view-Article/" + id;
+	}
+
+	@GetMapping("getgallery")
+	public String galleryLoader(Model model) {
+		model.addAttribute("loading", filesOfFolders());
+		return "gallery";
+	}
+
+	@PostMapping("uploadgallery.html?successupload")
+	public String uploadGallery(@RequestParam("file") MultipartFile[] files, Principal principal) throws IOException {
+		String username = principal.getName();
+		accountService.uploadGallery(files, username);
+		return "redirect:/getgallery";
+	}
+	
+	private List<String> filesOfFolders() {
+		File folder = new File(LOADGALLERY);
+		File[] contents = folder.listFiles();
+		List<String> results = new ArrayList<>();
+
+		for (File element : contents) {
+			if (element.isFile()) {
+				results.add("/gallery/" + element.getName());
+			}
+		}
+		return results;																																																																																																											
+	}
+	
+}

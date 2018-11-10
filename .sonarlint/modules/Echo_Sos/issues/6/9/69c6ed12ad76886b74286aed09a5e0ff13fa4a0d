@@ -1,0 +1,79 @@
+
+squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥‚‰HΛRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheck6"AMove this left curly brace to the beginning of next line of code.(ςτΆΛ8π€φάκ,HΏRMINORZ
+CODE_SMELL
+Ssquid:S2384O"Return a copy of "comments".(ηΠυΠ8π€φάκ,HΊRMINORZVULNERABILITY
+"squid:LeftCurlyBraceStartLineCheckF"AMove this left curly brace to the beginning of next line of code.(ς–Ή8π€φάκ,H»RMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheck$"AMove this left curly brace to the beginning of next line of code.(µ‡ι–8π€φάκ,H«RMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckx"AMove this left curly brace to the beginning of next line of code.(©³―Ϋϊÿÿÿÿ8π€φάκ,H―RMINORZ
+CODE_SMELL
+xsquid:S3340"?Reorder annotation arguments to match the order of declaration.(Γ‡ΨΈϊÿÿÿÿ8π€φάκ,H·RMINORZ
+CODE_SMELL
+‹"squid:LeftCurlyBraceStartLineCheck2"AMove this left curly brace to the beginning of next line of code.(ΟÒΗ8π€φάκ,HΌRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheckR"AMove this left curly brace to the beginning of next line of code.(¬Ò½8π€φάκ,H§RMINORZ
+CODE_SMELL
+2squid:RightCurlyBraceDifferentLineAsNextBlockChecks"1Move this "else" keyword to a new dedicated line.(ε¥‡8π€φάκ,HΜRMINORZ
+CODE_SMELL
+rsquid:S00105"EReplace all tab characters in this file by sequences of white-spaces.8π€φάκ,HΘRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(ΥηΤ―ύÿÿÿÿ8π€φάκ,H¨RMINORZ
+CODE_SMELL
+Tsquid:S1451"&Add or update the header of this file.8π€φάκ,H°RBLOCKERZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckB"AMove this left curly brace to the beginning of next line of code.(ξ“Ψϋÿÿÿÿ8π€φάκ,HΙRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheck^"AMove this left curly brace to the beginning of next line of code.(ƒΩΰΈ8π€φάκ,H΄RMINORZ
+CODE_SMELL
+ƒsquid:S2159q"VRemove this call to "equals"; comparisons between unrelated types always return false.(χό›«8®‡Πέκ,HΑRMAJORZBUG
+"squid:LeftCurlyBraceStartLineCheckn"AMove this left curly brace to the beginning of next line of code.(ύΓΊζ8π€φάκ,HΗRMINORZ
+CODE_SMELL
+ksquid:S2589q"7Remove this expression which always evaluates to "true"(χό›«8®‡Πέκ,HΒRMAJORZ
+CODE_SMELL
+bsquid:S2143y")Use the Java 8 Date and Time API instead.(”Η©ωÿÿÿÿ8π€φάκ,HΉRMAJORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckb"AMove this left curly brace to the beginning of next line of code.(›αΗύÿÿÿÿ8π€φάκ,H½RMINORZ
+CODE_SMELL
+‹squid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ΜΩ¦όÿÿÿÿH²RMINORZ
+CODE_SMELL
+|squid:HiddenFieldChecky"8Rename "date" which hides the field declared at line 34.(”Η©ωÿÿÿÿ8•›βάδ,HΖRMAJORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheckq"AMove this left curly brace to the beginning of next line of code.(χό›«8π€φάκ,H¬RMINORZ
+CODE_SMELL
+Tsquid:S00113"'Add a new line at the end of this file.8π€φάκ,HªRMINORZ
+CODE_SMELL
+‚squid:S001002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΟÒΗ8πΰ“άδ,HΕRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheckj"AMove this left curly brace to the beginning of next line of code.(Ύύ†8π€φάκ,H¤RMINORZ
+CODE_SMELL
+squid:S00100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ώώÿÿÿÿÿ8πΰ“άδ,HΈRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckV"AMove this left curly brace to the beginning of next line of code.(—ιΜ¤ÿÿÿÿÿ8π€φάκ,H¥RMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck."AMove this left curly brace to the beginning of next line of code.(›Ώώÿÿÿÿÿ8π€φάκ,H³RMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckN"AMove this left curly brace to the beginning of next line of code.(φώΩϋÿÿÿÿ8π€φάκ,HΐRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheckf"AMove this left curly brace to the beginning of next line of code.(ζυ–•8π€φάκ,HµRMINORZ
+CODE_SMELL
+ƒsquid:S2159q"VRemove this call to "equals"; comparisons between unrelated types always return false.(χό›«8®‡Πέκ,H©RMAJORZBUG
+Wsquid:S2384S"Store a copy of "comments".(ιΎΟ®ϋÿÿÿÿ8π€φάκ,HΚRMINORZVULNERABILITY
+"squid:LeftCurlyBraceStartLineCheck>"AMove this left curly brace to the beginning of next line of code.(Κτΐ8π€φάκ,H®RMINORZ
+CODE_SMELL
+‹"squid:LeftCurlyBraceStartLineCheck'"AMove this left curly brace to the beginning of next line of code.(ΆρΜt8π€φάκ,H­RMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckZ"AMove this left curly brace to the beginning of next line of code.(»βΊόÿÿÿÿ8π€φάκ,HΎRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineChecks"AMove this left curly brace to the beginning of next line of code.(ε¥‡8π€φάκ,H¶RMINORZ
+CODE_SMELL
+ƒsquid:S00116"URename this field "id_article" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(δίω‹H¦RMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckJ"AMove this left curly brace to the beginning of next line of code.(θά›ÿÿÿÿÿ8π€φάκ,HΓRMINORZ
+CODE_SMELL
+…squid:S001172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΟÒΗ8πΰ“άδ,HΔRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck:"AMove this left curly brace to the beginning of next line of code.(„κήΪύÿÿÿÿ8π€φάκ,H±RMINORZ
+CODE_SMELL

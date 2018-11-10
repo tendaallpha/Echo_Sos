@@ -1,0 +1,6 @@
+
+.less.active .button-read-more, .button-read-less  {display: none}
+.less.active .button-read-less {display: block}
+.more {margin-top: 10px}
+/* .more p {margin: 0;padding: 0} */
+

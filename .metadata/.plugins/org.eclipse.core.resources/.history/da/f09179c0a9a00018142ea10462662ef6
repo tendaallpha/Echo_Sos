@@ -1,0 +1,11 @@
+package cm.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class AllPageController {
+	
+	public String getHome() {
+		return "Hello world";
+	}
+}

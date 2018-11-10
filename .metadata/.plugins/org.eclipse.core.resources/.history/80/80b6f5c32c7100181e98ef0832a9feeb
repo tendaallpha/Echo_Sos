@@ -1,0 +1,35 @@
+package cm.allpha.Echo_Lbc.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import cm.allpha.Echo_Lbc.model.EchoLbcArticle;
+import cm.allpha.Echo_Lbc.service.EchoLbcArticleService;
+
+@Controller
+public class EchoLbcArticleController {
+
+	@Autowired
+	private EchoLbcArticleService echoLbcArticleService;
+
+	@GetMapping("addArticle")
+	public String addArticle(Model model) {
+		EchoLbcArticle echoLbcArticle = new EchoLbcArticle();
+		model.addAttribute("addArticle", echoLbcArticle);
+		return "addArticle";
+	}
+
+	@PostMapping("addArticle")
+	public String addArticle(@ModelAttribute EchoLbcArticle echoLbcArticle) {
+		echoLbcArticleService.addArticle(echoLbcArticle);
+		echoLbcArticle.setDate(echoLbcArticle.addDate());
+		echoLbcArticleService.addArticle(echoLbcArticle);
+		echoLbcArticleService.addArticle(echoLbcArticle);
+		return "redirect:/addArticle";
+	}
+
+}

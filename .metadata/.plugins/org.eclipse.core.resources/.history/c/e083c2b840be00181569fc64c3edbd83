@@ -1,0 +1,31 @@
+package cm.allpha.Echo_Sos.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import cm.allpha.Echo_Sos.model.EchoSosPlanning;
+import cm.allpha.Echo_Sos.service.EchoSosPlanningService;
+
+@Controller
+public class EchoSosPlanningController {
+
+	@Autowired
+	private EchoSosPlanningService planningService;
+
+	@GetMapping("planning.html")
+	public String getPlanning(Model model) {
+		model.addAttribute("plannings", new EchoSosPlanning());
+		return "planning";
+	}
+
+	@PostMapping("submitPlanning.html")
+	public String setPlanning(@ModelAttribute EchoSosPlanning planning) {
+		planningService.savePlanning(planning);
+		return "redirect:/planning.html";
+	}
+
+}

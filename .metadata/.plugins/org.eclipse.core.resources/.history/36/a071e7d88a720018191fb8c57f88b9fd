@@ -1,0 +1,19 @@
+package cm.allpha.Echo_Sos.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import cm.allpha.Echo_Sos.service.EchoLbcMessageService;
+
+@Controller
+public class EchoLbcMessageController {
+	@Autowired
+	private EchoLbcMessageService echoLbcMessageService;
+	
+	@GetMapping("message")
+	public String getMessage() {
+		return "page-mailbox";
+	}
+	
+}

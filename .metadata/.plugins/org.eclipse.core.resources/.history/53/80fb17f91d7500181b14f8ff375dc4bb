@@ -1,0 +1,12 @@
+package cm.allpha.Echo_Sos;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EchoSosApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EchoSosApplication.class, args);
+	}
+}

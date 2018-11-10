@@ -1,0 +1,184 @@
+package cm.allpha.Echo_Sos.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "account")
+public class EchoSosAccount {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id_account;
+	private String cname;
+	private String ccity;
+	private String ccreatingdate;
+	private int cphone;
+	private String cvalidation;
+	private String psex;
+	private String plastname;
+	private String pfirstname;
+	private int pphone;
+	private String cpassword;
+	private String status;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ownerarticle")
+	private List<EchoSosArticle> articles = new ArrayList<EchoSosArticle>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "sendermail")
+	private List<EchoSosMail> mails = new ArrayList<EchoSosMail>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ownerplanning")
+	private List<EchoSosPlanning> plannings = new ArrayList<EchoSosPlanning>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ownerchildren")
+	private List<EchoSosChild> children = new ArrayList<EchoSosChild>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "userowner")
+	private List<EchoSosComment> comments = new ArrayList<EchoSosComment>();
+	
+	public EchoSosAccount() {
+	}
+
+	public EchoSosAccount(Integer id_account, String cname, String ccity, String ccreatingdate, int cphone,
+			String cvalidation, String psex, String plastname, String pfirstname, int pphone, String cpassword,
+			String status) {
+		super();
+		this.id_account = id_account;
+		this.cname = cname;
+		this.ccity = ccity;
+		this.ccreatingdate = ccreatingdate;
+		this.cphone = cphone;
+		this.cvalidation = cvalidation;
+		this.psex = psex;
+		this.plastname = plastname;
+		this.pfirstname = pfirstname;
+		this.pphone = pphone;
+		this.cpassword = cpassword;
+		this.status = status;
+	}
+
+	public Integer getId_account() {
+		return id_account;
+	}
+
+	public void setId_account(Integer id_account) {
+		this.id_account = id_account;
+	}
+
+	public String getCname() {
+		return cname;
+	}
+
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+
+	public String getCcity() {
+		return ccity;
+	}
+
+	public void setCcity(String ccity) {
+		this.ccity = ccity;
+	}
+
+	public String getCcreatingdate() {
+		return ccreatingdate;
+	}
+
+	public void setCcreatingdate(String ccreatingdate) {
+		this.ccreatingdate = ccreatingdate;
+	}
+
+	public int getCphone() {
+		return cphone;
+	}
+
+	public void setCphone(int cphone) {
+		this.cphone = cphone;
+	}
+
+	public String getCvalidation() {
+		return cvalidation;
+	}
+
+	public void setCvalidation(String cvalidation) {
+		this.cvalidation = cvalidation;
+	}
+
+	public String getPsex() {
+		return psex;
+	}
+
+	public void setPsex(String psex) {
+		this.psex = psex;
+	}
+
+	public String getPlastname() {
+		return plastname;
+	}
+
+	public void setPlastname(String plastname) {
+		this.plastname = plastname;
+	}
+
+	public String getPfirstname() {
+		return pfirstname;
+	}
+
+	public void setPfirstname(String pfirstname) {
+		this.pfirstname = pfirstname;
+	}
+
+	public int getPphone() {
+		return pphone;
+	}
+
+	public void setPphone(int pphone) {
+		this.pphone = pphone;
+	}
+
+	public String getCpassword() {
+		return cpassword;
+	}
+
+	public void setCpassword(String cpassword) {
+		this.cpassword = cpassword;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public List<EchoSosArticle> getArticles() {
+		return articles;
+	}
+
+	public void setArticles(List<EchoSosArticle> articles) {
+		this.articles = articles;
+	}
+
+	public List<EchoSosMail> getMails() {
+		return mails;
+	}
+
+	public void setMails(List<EchoSosMail> mails) {
+		this.mails = mails;
+	}
+
+	public List<EchoSosPlanning> getPlannings() {
+		return plannings;
+	}
+
+	public void setPlannings(List<EchoSosPlanning> plannings) {
+		this.plannings = plannings;
+	}
+
+}

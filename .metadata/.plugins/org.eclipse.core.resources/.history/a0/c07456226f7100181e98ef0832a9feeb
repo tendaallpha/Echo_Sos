@@ -1,0 +1,132 @@
+package cm.allpha.Echo_Lbc.model;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "account")
+public class EchoLbcAccount {
+
+	private Integer id_account;
+	private String name;
+	private String firstName;
+	private int phone;
+	private String town;
+	private String sex;
+	private String image;
+	private String login;
+	@Enumerated(EnumType.STRING)
+	private Role status;
+	private String pwd;
+	@ManyToMany
+	@JoinTable(name = "cosult_message", joinColumns = @JoinColumn(name = "id_account", referencedColumnName = "id_account"), inverseJoinColumns = @JoinColumn(name = "id_message", referencedColumnName = "id_message"))
+	private List<EchoLbcMessage> message;
+
+	public EchoLbcAccount() {
+	}
+
+	public EchoLbcAccount(int id_account, String login, Role status, String pwd) {
+		super();
+		this.login = login;
+		this.status = status;
+		this.pwd = pwd;
+	}
+
+	
+	
+	public Integer getId_account() {
+		return id_account;
+	}
+
+	public void setId_account(Integer id_account) {
+		this.id_account = id_account;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public int getPhone() {
+		return phone;
+	}
+
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}
+
+	public String getTown() {
+		return town;
+	}
+
+	public void setTown(String town) {
+		this.town = town;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public Role getStatus() {
+		return status;
+	}
+
+	public void setStatus(Role status) {
+		this.status = status;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	public List<EchoLbcMessage> getMessage() {
+		return message;
+	}
+
+	public void setMessage(List<EchoLbcMessage> message) {
+		this.message = message;
+	}
+
+}

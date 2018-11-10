@@ -1,0 +1,73 @@
+package cm.allphaechososcontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import cm.allpha.Echo_Sos.model.EchoSosAccount;
+import cm.allpha.Echo_Sos.model.EchoSosArticle;
+import cm.allpha.Echo_Sos.model.EchoSosComment;
+import cm.allpha.Echo_Sos.service.EchoSosAccountService;
+import cm.allpha.Echo_Sos.service.EchoSosArticleService;
+
+@Controller
+public class EchoSosDefaultController {
+
+	@Autowired
+	private EchoSosArticleService echoSosArticleService;
+	@Autowired
+	private EchoSosAccountService echoSosAccountService;
+
+	@GetMapping("authentification")
+	public String getAuthentification() {
+		return "page-login";
+	}
+
+	@GetMapping("home")
+	public String getArticle(Model model) {
+		model.addAttribute("articles", echoSosArticleService.getAllArticles());
+		return "home";
+	}
+
+	@PostMapping("home.com")
+	public String setViewArticleComment(@RequestParam("articleid") Integer articleid,
+			@RequestParam("comment") String comment) {
+		EchoSosArticle echoLbcArticle = echoSosArticleService.getIdArticle(articleid);
+		EchoSosComment addcomments = new EchoSosComment(null, comment, echoLbcArticle);
+		echoLbcArticle.getComments().add(addcomments);
+		echoSosArticleService.addArticle(echoLbcArticle);
+		return "redirect:/home";
+	}
+
+	@GetMapping("view-Article/{id}")
+	public String getViewArticle(@PathVariable("id") Integer id, Model model) {
+		EchoSosArticle echoLbcArticle1 = echoSosArticleService.getIdArticle(id);
+		model.addAttribute("articles", echoLbcArticle1);
+		return "view-Article";
+	}
+
+	@PostMapping("view-Article/{id}")
+	public String setViewArticle(@PathVariable("id") Integer id, @RequestParam("comment") String comment) {
+		EchoSosArticle echoLbcArticle1 = echoSosArticleService.getIdArticle(id);
+		EchoSosComment addcomments = new EchoSosComment(null, comment, echoLbcArticle1);
+		echoLbcArticle1.getComments().add(addcomments);
+		echoSosArticleService.addArticle(echoLbcArticle1);
+		return "redirect:/view-Article/" + id;
+	}
+
+	@GetMapping("incrementLove/{id}")
+	public String addLove(@PathVariable("id") Integer id) {
+		EchoSosArticle echoLbcArticle1 = echoSosArticleService.getIdArticle(id);
+		echoLbcArticle1.addLove();
+		echoSosArticleService.addArticle(echoLbcArticle1);
+		return "redirect:/view-Article/" + id;
+
+	}
+
+	
+
+}

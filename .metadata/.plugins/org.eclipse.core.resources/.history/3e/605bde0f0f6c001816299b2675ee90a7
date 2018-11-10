@@ -1,0 +1,47 @@
+package cm.allpha.Echo_Lbc.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import cm.allpha.Echo_Lbc.model.EchoLbcRubric;
+import cm.allpha.Echo_Lbc.service.EchoLbcRubricService;
+
+@Controller
+public class EchoLbcRubricController {
+
+	@Autowired
+	private EchoLbcRubricService echoLbcRubricService;
+
+	@GetMapping("addArticle")
+	public String addArticle(Model model) {
+		EchoLbcRubric echoLbcRubric = new EchoLbcRubric();
+		model.addAttribute("addArticle", echoLbcRubric);
+		return "addArticle";
+	}
+
+	@PostMapping("addArticle")
+	public String addArticle(@ModelAttribute EchoLbcRubric echoLbcRubric) {
+		echoLbcRubricService.addArticle(echoLbcRubric);
+		return "redirect:/addArticle";
+	}
+
+	@GetMapping("comment")
+	public String addCommentArticle(Model model) {
+		EchoLbcRubric echoLbcRubric = new EchoLbcRubric();
+		model.addAttribute("comments", echoLbcRubric);
+		return "view-Article";
+	}
+
+	@PostMapping("comment")
+	public String addCommentArticle(@ModelAttribute String comment) {
+		echoLbcRubricService.addCommentArticle(comment);
+		return "redirect:/view-Article";
+	}
+
+}

@@ -1,0 +1,60 @@
+package cm.allpha.Echo_Lbc.model;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="message")
+public class EchoLbcMessage {
+
+	@Id
+	private int id_message;
+	private Date date_sended;
+	private Date date_received;
+	private String message;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "id_account", name="propritaire")
+	private EchoLbcAccount proprietaire;
+		
+	public EchoLbcMessage() {}
+
+	public EchoLbcMessage(int id_message, Date date_sended, Date date_received, String message) {
+		super();
+		this.id_message = id_message;
+		this.date_sended = date_sended;
+		this.date_received = date_received;
+		this.message = message;
+	}
+	
+	public int getId_message() {
+		return id_message;
+	}
+	public void setId_message(int id_message) {
+		this.id_message = id_message;
+	}
+	public Date getDate_sended() {
+		return date_sended;
+	}
+	public void setDate_sended(Date date_sended) {
+		this.date_sended = date_sended;
+	}
+	public Date getDate_received() {
+		return date_received;
+	}
+	public void setDate_received(Date date_received) {
+		this.date_received = date_received;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+}

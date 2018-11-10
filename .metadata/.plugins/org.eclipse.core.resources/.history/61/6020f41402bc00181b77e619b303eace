@@ -1,0 +1,119 @@
+package cm.allpha.Echo_Sos.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="planning")
+public class EchoSosPlanning {
+
+	private int id_planning;
+	private long timeB;
+	private long timeE;
+	private String acMonday;
+	private String acTursday;
+	private String acWednesday;
+	private String acThursday;
+	private String acFriday;
+	private String acSatuday;
+	private String acSunday;
+
+	public EchoSosPlanning() {
+	}
+
+	public EchoSosPlanning(int id_planning, long timeB, long timeE, String acMonday, String acTursday,
+			String acWednesday, String acThursday, String acFriday, String acSatuday, String acSunday) {
+		super();
+		this.id_planning = id_planning;
+		this.timeB = timeB;
+		this.timeE = timeE;
+		this.acMonday = acMonday;
+		this.acTursday = acTursday;
+		this.acWednesday = acWednesday;
+		this.acThursday = acThursday;
+		this.acFriday = acFriday;
+		this.acSatuday = acSatuday;
+		this.acSunday = acSunday;
+	}
+
+	public int getId_planning() {
+		return id_planning;
+	}
+
+	public void setId_planning(int id_planning) {
+		this.id_planning = id_planning;
+	}
+
+	public long getTimeB() {
+		return timeB;
+	}
+
+	public void setTimeB(long timeB) {
+		this.timeB = timeB;
+	}
+
+	public long getTimeE() {
+		return timeE;
+	}
+
+	public void setTimeE(long timeE) {
+		this.timeE = timeE;
+	}
+
+	public String getAcMonday() {
+		return acMonday;
+	}
+
+	public void setAcMonday(String acMonday) {
+		this.acMonday = acMonday;
+	}
+
+	public String getAcTursday() {
+		return acTursday;
+	}
+
+	public void setAcTursday(String acTursday) {
+		this.acTursday = acTursday;
+	}
+
+	public String getAcWednesday() {
+		return acWednesday;
+	}
+
+	public void setAcWednesday(String acWednesday) {
+		this.acWednesday = acWednesday;
+	}
+
+	public String getAcThursday() {
+		return acThursday;
+	}
+
+	public void setAcThursday(String acThursday) {
+		this.acThursday = acThursday;
+	}
+
+	public String getAcFriday() {
+		return acFriday;
+	}
+
+	public void setAcFriday(String acFriday) {
+		this.acFriday = acFriday;
+	}
+
+	public String getAcSatuday() {
+		return acSatuday;
+	}
+
+	public void setAcSatuday(String acSatuday) {
+		this.acSatuday = acSatuday;
+	}
+
+	public String getAcSunday() {
+		return acSunday;
+	}
+
+	public void setAcSunday(String acSunday) {
+		this.acSunday = acSunday;
+	}
+
+}

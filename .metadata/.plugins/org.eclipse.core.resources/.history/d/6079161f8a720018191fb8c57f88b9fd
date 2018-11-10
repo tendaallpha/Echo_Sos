@@ -1,0 +1,8 @@
+package cm.allpha.Echo_Lbc.persistence;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import cm.allpha.Echo_Lbc.model.EchoLbcArticle;
+
+public interface EchoLbcArticleInterface extends JpaRepository<EchoLbcArticle, Integer> {
+}

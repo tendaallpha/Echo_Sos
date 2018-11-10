@@ -1,0 +1,16 @@
+package cm.allpha.Echo_Sos.model;
+
+public enum Role {
+	Male("Male"), Femal("Femal"), Admin("Admin"), User("User"), Parrain("Parrain"), Child("Child");
+
+	private final String option;
+
+	private Role(String name) {
+		this.option = name;
+	}
+
+	public String getOption() {
+		return option;
+	}
+
+}

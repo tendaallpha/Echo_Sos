@@ -1,0 +1,59 @@
+
+"squid:LeftCurlyBraceStartLineCheckd"AMove this left curly brace to the beginning of next line of code.(ΜΖλΒ8βΟ§έκ,HΥRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckH"AMove this left curly brace to the beginning of next line of code.(®ΐΔ­ωÿÿÿÿ8ΆΓιΫκ,HΟRMINORZ
+CODE_SMELL
+‹"squid:LeftCurlyBraceStartLineCheckD"AMove this left curly brace to the beginning of next line of code.(τΤα8¤ΜΊάκ,HΡRMINORZ
+CODE_SMELL
+squid:S00116"SRename this field "id_child" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Νυόÿÿÿÿ8ΆΓιΫκ,HYRMINORZ
+CODE_SMELL
+†squid:S001170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ος8¤ΜΊάκ,HΚRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck<"AMove this left curly brace to the beginning of next line of code.(Ε“’“ύÿÿÿÿ8¤ΜΊάκ,HÒRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckh"AMove this left curly brace to the beginning of next line of code.(µ­ —όÿÿÿÿ8βΟ§έκ,HΦRMINORZ
+CODE_SMELL
+qsquid:S00105"EReplace all tab characters in this file by sequences of white-spaces.8ΡρθΫκ,H@RMINORZ
+CODE_SMELL
+squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥‚‰8ΆΓιΫκ,H\RMINORZ
+CODE_SMELL
+Ssquid:S1451"&Add or update the header of this file.8ΡρθΫκ,H?RBLOCKERZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheckP"AMove this left curly brace to the beginning of next line of code.(©…Σφ8¤ΜΊάκ,HΕRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckX"AMove this left curly brace to the beginning of next line of code.(Έ‹ΛΎψÿÿÿÿ8¤ΜΊάκ,HΞRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheck4"AMove this left curly brace to the beginning of next line of code.(©Ψ8¤ΜΊάκ,HΝRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck,"AMove this left curly brace to the beginning of next line of code.(ΫΊ½ύÿÿÿÿ8¤ΜΊάκ,HΤRMINORZ
+CODE_SMELL
+ƒsquid:S001000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ος8¤ΜΊάκ,HΗRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheck\"AMove this left curly brace to the beginning of next line of code.(Ξόώ8¤ΜΊάκ,HΜRMINORZ
+CODE_SMELL
+ssquid:S3340"?Reorder annotation arguments to match the order of declaration.(ψζ†8©ϋάκ,H©RMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck "AMove this left curly brace to the beginning of next line of code.(Κδϋÿÿÿÿ8¤ΜΊάκ,HΑRMINORZ
+CODE_SMELL
+‹squid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»•α³ύÿÿÿÿ8¤ΜΊάκ,HΒRMINORZ
+CODE_SMELL
+{squid:S00107"AConstructor has 8 parameters, which is greater than 7 authorized.(»•α³ύÿÿÿÿ8ΫΧ έκ,HΓRMAJORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(ΏΉΞ8¤ΜΊάκ,H¨RMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheck0"AMove this left curly brace to the beginning of next line of code.(¬ος8¤ΜΊάκ,HΔRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck`"AMove this left curly brace to the beginning of next line of code.(ƒÿ“ύÿÿÿÿ8ΆΓιΫκ,HΖRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheck@"AMove this left curly brace to the beginning of next line of code.(―°Ϋ8¤ΜΊάκ,HΙRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheck8"AMove this left curly brace to the beginning of next line of code.(λ›€§8¤ΜΊάκ,HΘRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(‡‡ψÿÿÿÿ8¤ΜΊάκ,H«RMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckT"AMove this left curly brace to the beginning of next line of code.(—Ή―ύÿÿÿÿ8¤ΜΊάκ,HΠRMINORZ
+CODE_SMELL
+"squid:LeftCurlyBraceStartLineCheckL"AMove this left curly brace to the beginning of next line of code.(δΟ”Π8¤ΜΊάκ,HΣRMINORZ
+CODE_SMELL
+squid:S00100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΫΊ½ύÿÿÿÿ8¤ΜΊάκ,HΛRMINORZ
+CODE_SMELL

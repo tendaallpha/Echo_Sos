@@ -1,0 +1,44 @@
+package cm.allpha.Echo_Sos.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import cm.allpha.Echo_Sos.model.EchoLbcAccount;
+import cm.allpha.Echo_Sos.service.EchoLbcAccountService;
+
+@Controller
+public class EchoSosAccountController {
+
+	@Autowired
+	private EchoLbcAccountService accountService;
+
+	@GetMapping("inscription")
+	public String getNewAccount(Model model) {
+		EchoLbcAccount echoLbcAccount= new EchoLbcAccount();
+		model.addAttribute("account", echoLbcAccount);
+		return "inscription";
+	}
+
+	@PostMapping(value = "inscription")
+	public String addAccount(@ModelAttribute EchoLbcAccount account) {
+		accountService.addAccount(account);
+		return "redirect:/authentification";
+	}
+
+	@GetMapping("personalAccount")
+	public String getPersonalAccount(Model model) {
+		EchoLbcAccount echoLbcAccount= new EchoLbcAccount();
+		model.addAttribute("addPersonalAccount", echoLbcAccount);
+		return "listacc";
+	}
+
+	@PostMapping("personalAccount")
+	public String addPersonalAccount(@ModelAttribute EchoLbcAccount personalAccount) {
+		accountService.addAccount(personalAccount);
+		return "redirect:/listacc";
+	}
+}

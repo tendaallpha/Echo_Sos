@@ -1,0 +1,7 @@
+package cm.allpha.Echo_Sos.model;
+
+public enum Sex {
+
+	Male("Male"), Femal("Femal");
+	
+}

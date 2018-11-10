@@ -1,0 +1,66 @@
+package cm.allpha.Echo_Lbc.model;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="account")
+public class EchoLbcAccount extends EchoLbcPerson {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7681060084758042173L;
+	private String login;
+	@Enumerated(EnumType.STRING)
+	private Role status;
+	private String pwd;
+	@ManyToMany
+	@JoinTable(name="cosult_message", joinColumns=@JoinColumn(name="id_account", referencedColumnName="id_person"), inverseJoinColumns=@JoinColumn(name="id_message", referencedColumnName="id_message"))
+	private List<EchoLbcMessage> message;
+	
+	public EchoLbcAccount() {}
+
+	public EchoLbcAccount(int id_person, String name, String firstName, int phone, String town, String sex, String image) {
+		super(id_person, name, firstName, phone, town, sex, image);
+	}
+
+!ùmehk	public EchoLbcAccount(int id_account, String login, Role status, String pwd) {
+		super();
+		this.login = login;
+		this.status = status;
+		this.pwd = pwd;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public Role getStatus() {
+		return status;
+	}
+
+	public void setStatus(Role status) {
+		this.status = status;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	
+		
+}

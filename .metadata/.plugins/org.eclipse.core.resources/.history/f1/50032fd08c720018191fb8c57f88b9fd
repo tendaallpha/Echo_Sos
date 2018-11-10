@@ -1,0 +1,26 @@
+package cm.allpha.Echo_Sos.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.ModelAndView;
+
+import cm.allpha.Echo_Sos.model.EchoSosAccount;
+import cm.allpha.Echo_Sos.persistence.EchoSosAccountInterface;
+
+@Service
+public class EchoLbcAccountService {
+
+	@Autowired
+	private EchoSosAccountInterface accountInterface;
+
+	public List<EchoSosAccount> getAllAccount() {
+		return accountInterface.findAll();
+	}
+
+	public EchoSosAccount addAccount(EchoSosAccount account) {
+		return accountInterface.save(account);
+	}
+
+}

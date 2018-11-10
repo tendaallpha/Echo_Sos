@@ -1,0 +1,51 @@
+
+Œ"squid:LeftCurlyBraceStartLineCheckb"AMove this left curly brace to the beginning of next line of code.(«ò¤í8¯šòè,HÃRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck~"AMove this left curly brace to the beginning of next line of code.(”äá½şÿÿÿÿ8¯šòè,HÄRMINORZ
+CODE_SMELL
+msquid:S1444""1Make this "public static LOADGALLERY" field final(´Ìó´ûÿÿÿÿ8¾š†¨ç,HÅRMINORZVULNERABILITY
+squid:S3008""VRename this field "LOADGALLERY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´Ìó´ûÿÿÿÿ8¾š†¨ç,HÆRMINORZ
+CODE_SMELL
+msquid:S1258":Add a constructor to the class, or provide default values.(»êŒ8¯šòè,HÇRMAJORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineChecky"AMove this left curly brace to the beginning of next line of code.(ÂÉ®ûÿÿÿÿ8¯šòè,HÈRMINORZ
+CODE_SMELL
+€squid:S00103M"KSplit this 122 characters long line (which is greater than 120 authorized).(¼‘À‡8ù¢İë,HÉRMAJORZ
+CODE_SMELL
+‹"squid:LeftCurlyBraceStartLineCheckD"AMove this left curly brace to the beginning of next line of code.(ŞÃÂr8¯šòè,HÊRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck3"AMove this left curly brace to the beginning of next line of code.(äşŠ¤ûÿÿÿÿ8¯šòè,HËRMINORZ
+CODE_SMELL
+ª"squid:ClassVariableVisibilityCheck""WMake LOADGALLERY a static final constant or non-public and provide accessors if needed.(´Ìó´ûÿÿÿÿ8¾š†¨ç,HÌRMINORZVULNERABILITY
+ˆsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´­úÛHÍRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(§ğ´æùÿÿÿÿ8ï¸èÙì,HÎRMINORZ
+CODE_SMELL
+rsquid:S00105"EReplace all tab characters in this file by sequences of white-spaces.8¯šòè,HÏRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckj"AMove this left curly brace to the beginning of next line of code.(ÂÙ´‹ûÿÿÿÿ8¯šòè,HĞRMINORZ
+CODE_SMELL
+qsquid:S4288"=Remove this annotation and use constructor injection instead.(êæÄŞ8¯šòè,HÑRMAJORZ
+CODE_SMELL
+asquid:S2325y"(Make "filesOfFolders" a "static" method.(ÂÉ®ûÿÿÿÿ8¯šòè,HÒRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck;"AMove this left curly brace to the beginning of next line of code.(Ğ±†˜ùÿÿÿÿ8¯šòè,HÓRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckX"AMove this left curly brace to the beginning of next line of code.(ÓíÓ‚şÿÿÿÿ8¯šòè,HÔRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheckN"AMove this left curly brace to the beginning of next line of code.(Öşâ‡ùÿÿÿÿ8¯šòè,HÕRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineChecks"AMove this left curly brace to the beginning of next line of code.(ô›…Íúÿÿÿÿ8¯šòè,HÖRMINORZ
+CODE_SMELL
+Tsquid:S00113"'Add a new line at the end of this file.8¯šòè,H×RMINORZ
+CODE_SMELL
+Tsquid:S1451"&Add or update the header of this file.8®šòè,HØRBLOCKERZ
+CODE_SMELL
+‹"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(»êŒ8¯šòè,HÙRMINORZ
+CODE_SMELL
+Œ"squid:LeftCurlyBraceStartLineCheck%"AMove this left curly brace to the beginning of next line of code.(ø³©ä8¯šòè,HÚRMINORZ
+CODE_SMELL
+…squid:S1192?"IDefine a constant instead of duplicating this literal "articles" 3 times.(°²ü—ıÿÿÿÿ8ï¸èÙì,HÛRCRITICALZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck*"AMove this left curly brace to the beginning of next line of code.(áÕœùÿÿÿÿ8¯šòè,HÜRMINORZ
+CODE_SMELL

@@ -1,0 +1,21 @@
+
+Tsquid:S00113"'Add a new line at the end of this file.8ç”Ò®é,HöRMINORZ
+CODE_SMELL
+¡"squid:ClassVariableVisibilityCheck"ZMake uploadDirectry a static final constant or non-public and provide accessors if needed.(µî®ãHûRMINORZVULNERABILITY
+rsquid:S00105"EReplace all tab characters in this file by sequences of white-spaces.8ç”Ò®é,HøRMINORZ
+CODE_SMELL
+qsquid:S4288"=Remove this annotation and use constructor injection instead.(êæÄÞ8ç”Ò®é,HóRMAJORZ
+CODE_SMELL
+ˆsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´­úÛHõRMINORZ
+CODE_SMELL
+‘"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(ÑÅúªøÿÿÿÿ8ç”Ò®é,HùRMINORZ
+CODE_SMELL
+dsquid:S1444"4Make this "public static uploadDirectry" field final(µî®ãHôRMINORZVULNERABILITY
+Œ"squid:LeftCurlyBraceStartLineCheck"AMove this left curly brace to the beginning of next line of code.(¦šâö8ç”Ò®é,H÷RMINORZ
+CODE_SMELL
+Œ"squid:LeftCurlyBraceStartLineCheck)"AMove this left curly brace to the beginning of next line of code.(’Á“ö8ç”Ò®é,HúRMINORZ
+CODE_SMELL
+Tsquid:S1451"&Add or update the header of this file.8ç”Ò®é,HòRBLOCKERZ
+CODE_SMELL
+nsquid:S1258":Add a constructor to the class, or provide default values.(¦šâö8ç”Ò®é,HñRMAJORZ
+CODE_SMELL

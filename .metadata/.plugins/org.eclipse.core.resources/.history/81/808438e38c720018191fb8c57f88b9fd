@@ -1,0 +1,33 @@
+package cm.allpha.Echo_Sos.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import cm.allpha.Echo_Sos.model.EchoSosArticle;
+import cm.allpha.Echo_Sos.service.EchoLbcArticleService;
+
+@Controller
+public class EchoSosArticleController {
+
+	@Autowired
+	private EchoLbcArticleService echoLbcArticleService;
+
+	@GetMapping("addArticle")
+	public String addArticle(Model model) {
+		EchoSosArticle echoSosArticle = new EchoSosArticle();
+		model.addAttribute("addArticle", echoSosArticle);
+		return "addArticle";
+	}
+
+	@PostMapping("addArticle")
+	public String addArticle(@ModelAttribute EchoSosArticle echoSosArticle) {
+		echoSosArticle.setDate(echoSosArticle.addDate());
+		echoLbcArticleService.addArticle(echoSosArticle);
+		return "redirect:/addArticle";
+	}
+
+}

@@ -1,0 +1,13 @@
+1528257259833	Rename resource 'page-user.html'
+1528257293408	Rename resource 'viewArticle.html'
+1528295932819	Delete element
+1528296072760	Rename resource 'page-user.html'
+1528652207488	Delete element
+1528668288336	Rename type 'EchoLbcRubricController'
+1528668401595	Rename type 'EchoLbcRubric'
+1528668461984	Rename type 'EchoLbcRubricInterface'
+1528668526295	Rename type 'EchoLbcRubricService'
+1528669251287	Rename field 'echoLbcRubService'
+1528670557502	Rename local variable 'rubric'
+1528670609191	Rename local variable 'rubric'
+1528670633059	Rename method 'getRubric'
