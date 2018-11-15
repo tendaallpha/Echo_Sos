@@ -26,7 +26,6 @@ public class EchoSosMailController {
 	public String editMail(@PathVariable("id") Integer idreceiver, Model model, Principal principal) {
 		String username = principal.getName();
 		EchoSosAccount user = accountService.getByUsername(Integer.parseInt(username));
-		// EchoSosAccount sender = accountService.getIdAccount(id);
 		EchoSosAccount receiver = accountService.getIdAccount(idreceiver);
 		model.addAttribute("user", user);
 		model.addAttribute("mails", mailService.getMailsBetween(user, receiver));
