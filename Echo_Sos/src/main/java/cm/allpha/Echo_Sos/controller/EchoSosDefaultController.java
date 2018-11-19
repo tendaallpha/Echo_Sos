@@ -54,7 +54,7 @@ public class EchoSosDefaultController {
 		model.addAttribute("user", user);
 		return "gallery";
 	}
-	
+
 	@GetMapping("associationview")
 	public String getAssociationView(Model model, Principal principal) {
 		String username = principal.getName();
@@ -63,7 +63,7 @@ public class EchoSosDefaultController {
 		model.addAttribute("articles", articleService.getAllArticles());
 		return "associatioviewmain";
 	}
-	
+
 	@GetMapping({ "/", "home" })
 	public String getArticle(Model model, Principal principal) {
 		String username = principal.getName();
@@ -74,8 +74,8 @@ public class EchoSosDefaultController {
 	}
 
 	@PostMapping("home.com")
-	public String setViewArticleComment(@RequestParam("userid") Integer userid, @RequestParam("articleid") Integer articleid,
-			@RequestParam("comment") String comment) {
+	public String setViewArticleComment(@RequestParam("userid") Integer userid,
+			@RequestParam("articleid") Integer articleid, @RequestParam("comment") String comment) {
 		EchoSosAccount owner = accountService.getIdAccount(userid);
 		EchoSosArticle article = articleService.getIdArticle(articleid);
 		EchoSosComment addcomments = new EchoSosComment(null, comment, article, owner);
@@ -91,7 +91,7 @@ public class EchoSosDefaultController {
 		EchoSosAccount user = accountService.getByUsername(Integer.parseInt(username));
 		model.addAttribute("user", user);
 		model.addAttribute("articles", article1);
-		return "view-Article";
+		return "home";
 	}
 
 	@GetMapping("incrementLove/{id}")
