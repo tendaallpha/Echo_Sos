@@ -251,7 +251,7 @@
 	<main class="app-content">
 	<div class="row" style="font-family: sans-serif;">
 		<div class="tile-status-allpha">
-			<form>
+			<form th:action="@{/publishstatus}" method="post">
 				<table>
 					<tr>
 						<td colspan="2"><b
@@ -263,9 +263,11 @@
 						<td><img class="app-sidebar__user-avatar" width="50px"
 							height="50px" th:src="@{'/profileImages/'+${user.id_account}}"
 							alt="user image"></td>
-						<td><input class="alert alert-white" 
+						<td><input class="alert alert-white"
 							style="padding-top: 15px; font-family: sans-serif; width: 405px; font-size: 14px; font-weight: bold; border: none;"
-							 placeholder="Edit your Status" required="required"></td>
+							name="stscomment" placeholder="Edit your Status"
+							required="required"> <input name="userid"
+							th:value="${user.id_account}" type="number" hidden=""></td>
 					</tr>
 					<tr>
 						<td colspan="2">
@@ -273,11 +275,12 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><button
+						<td colspan="2"><input type="file" id="real-file" hidden="" />
+						<button id="custom-button"
 								style="border: none; border-radius: 20px;"
 								class="btn btn-cyan mr-1 mb-1 ml-3">
 								<i class="fa fa-image text-warning"></i> Join An Image
-							</button>
+							</button><span id="custom-text"></span>
 							<button type="submit" style="border: none; border-radius: 20px;"
 								class="btn btn-cyan mr-1 mb-1 ml-4">
 								<i class="fa fa-share"></i> Publish Your Status
@@ -287,6 +290,26 @@
 			</form>
 		</div>
 	</div>
+
+	<div class="row" style="font-family: sans-serif;"
+		th:each="sts: ${status}">
+		<div class="col-md-6">
+			<div class="tile-article-allpha">
+				<div class="bg-dark">
+					<a> <img
+						th:src="@{'/profileImages/'+${sts.ownerstatus.id_account}}"
+						class="app-sidebar__user-avatar mr-2 ml-2" width="60px"
+						height="60px"> <b style="font-size: 15px;"
+						class="text-white" th:text="${sts.ownerstatus.plastname}"></b>
+					</a> <br><b class="text-primary">&nbsp Status Publish the <b th:text="${sts.date}"></b></b> 
+				</div>
+				<div class="bg-white">
+				<p th:text="${sts.stscontent}">
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="row" th:each="article: ${articles}"
 		style="font-family: sans-serif;">
 		<div class="col-md-6">
@@ -453,7 +476,7 @@
 		</div>
 
 	</aside>
-
+	
 	<!-- Essential javascripts for application to work-->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
@@ -537,6 +560,25 @@
 			ga('send', 'pageview');
 		}
 	</script>
+<!-- script of button upload -->
+<script>
+	const realFileBtn = document.getElementById("real-file");
+	const customBtn = document.getElementById("custom-button");
+	const customTxt = document.getElementById("custom-text");
+
+customBtn.addEventListener("click", function(){
+	realFileBtn.click();
+
+});
+
+realFileBtn.addEventListener("change", function(){
+	if (realFileBtn.value) {
+		customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\. \-\(\)]+)$/)[1];
+	} else{
+		customTxt.innerHTML = "No File Choosen, yet.";
+	}
+});
+</script>
 
 </body>
 </html>

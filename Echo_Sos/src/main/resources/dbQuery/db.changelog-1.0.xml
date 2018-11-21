@@ -88,7 +88,15 @@
 			<column name="ownerchildren" type="Integer" />
 		</createTable>
 
-
+		<!-- table of status -->
+		<createTable tableName="status">
+			<column name="idstatus" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="stscontent" type="varchar(1000)" />
+			<column name="date" type="date" />
+			<column name="ownerstatus" type="Integer" />
+		</createTable>
 
 		<addForeignKeyConstraint
 			constraintName="comment_article" referencedTableName="article"
@@ -114,14 +122,21 @@
 			constraintName="children_account" referencedTableName="account"
 			referencedColumnNames="id_account" baseTableName="child"
 			baseColumnNames="ownerchildren" />
+
 		<addForeignKeyConstraint
 			constraintName="comment_account" referencedTableName="account"
 			referencedColumnNames="id_account" baseTableName="comment"
 			baseColumnNames="userowner" />
-			<addForeignKeyConstraint
+
+		<addForeignKeyConstraint
 			constraintName="receivermail_account" referencedTableName="account"
 			referencedColumnNames="id_account" baseTableName="mail"
 			baseColumnNames="receivermails" />
+
+		<addForeignKeyConstraint
+			constraintName="status_account" referencedTableName="account"
+			referencedColumnNames="id_account" baseTableName="status"
+			baseColumnNames="ownerstatus" />
 
 		<!-- <sqlFile path="echoSos1.sql" relativeToChangelogFile="true" /> -->
 	</changeSet>

@@ -18,19 +18,19 @@ import cm.allpha.Echo_Sos.persistence.EchoSosArticleInterface;
 public class EchoSosArticleService {
 
 	@Autowired
-	private EchoSosArticleInterface echoSosArticleInterface;
+	private EchoSosArticleInterface articleInterface;
 
 	public List<EchoSosArticle> getAllArticles() {
-		return echoSosArticleInterface.findAll();
+		return articleInterface.findAll();
 	}
 
 	public EchoSosArticle addArticle(EchoSosArticle echoSosArticle) {
-		return echoSosArticleInterface.save(echoSosArticle);
+		return articleInterface.save(echoSosArticle);
 	}
 
 	public void addArticleWithImage(MultipartFile[] files, EchoSosArticle echoSosArticle) throws IOException{
 
-		echoSosArticle = echoSosArticleInterface.save(echoSosArticle);
+		echoSosArticle = articleInterface.save(echoSosArticle);
 		int id = echoSosArticle.getId_article();
 		for (int i = 0; i < 1; i++) {
 			Path fileNameAndPath = Paths.get(EchoSosArticleController.uploadDirectry, id + "");
@@ -39,7 +39,7 @@ public class EchoSosArticleService {
 	}
 
 	public EchoSosArticle getIdArticle(Integer id) {
-		return echoSosArticleInterface.findById(id).get();
+		return articleInterface.findById(id).get();
 	}
 
 }

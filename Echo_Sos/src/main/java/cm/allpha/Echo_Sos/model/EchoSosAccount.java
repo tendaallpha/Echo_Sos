@@ -41,6 +41,8 @@ public class EchoSosAccount {
 	private List<EchoSosComment> comments = new ArrayList<EchoSosComment>();
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "receivermails")
 	private List<EchoSosMail> receivermails = new ArrayList<EchoSosMail>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ownerstatus")
+	private List<EchoSosStatus> ownerstatus = new ArrayList<EchoSosStatus>();
 	
 	public EchoSosAccount() {
 	}

@@ -21,12 +21,15 @@ import cm.allpha.Echo_Sos.model.EchoSosComment;
 import cm.allpha.Echo_Sos.service.EchoSosAccountService;
 import cm.allpha.Echo_Sos.service.EchoSosArticleService;
 import cm.allpha.Echo_Sos.service.EchoSosPlanningService;
+import cm.allpha.Echo_Sos.service.EchoSosStatusService;
 
 @Controller
 public class EchoSosDefaultController {
 
 	@Autowired
 	private EchoSosArticleService articleService;
+	@Autowired
+	private EchoSosStatusService statusService;
 	@Autowired
 	private EchoSosPlanningService planningService;
 	@Autowired
@@ -70,6 +73,7 @@ public class EchoSosDefaultController {
 		EchoSosAccount user = accountService.getByUsername(Integer.parseInt(username));
 		model.addAttribute("user", user);
 		model.addAttribute("articles", articleService.getAllArticles());
+		model.addAttribute("status", statusService.getAllStatus());
 		return "home";
 	}
 
