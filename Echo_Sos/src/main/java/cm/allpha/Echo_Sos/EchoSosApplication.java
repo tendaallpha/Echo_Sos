@@ -9,6 +9,7 @@ import cm.allpha.Echo_Sos.controller.EchoSosAccountController;
 import cm.allpha.Echo_Sos.controller.EchoSosArticleController;
 import cm.allpha.Echo_Sos.controller.EchoSosChildController;
 import cm.allpha.Echo_Sos.controller.EchoSosDefaultController;
+import cm.allpha.Echo_Sos.controller.EchoSosStatusController;
 
 @SpringBootApplication
 public class EchoSosApplication {
@@ -22,6 +23,8 @@ public class EchoSosApplication {
 		filegallery.mkdir();
 		File filechildrenprofile = new File(EchoSosChildController.childrenprofile);
 		filechildrenprofile.mkdir();
+		File filestatusimg= new File(EchoSosStatusController.STATUSIMAGES);
+		filestatusimg.mkdir();
 
 		System.out.println(file.getAbsolutePath());
 

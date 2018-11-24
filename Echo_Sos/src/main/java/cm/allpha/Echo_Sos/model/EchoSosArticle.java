@@ -109,15 +109,14 @@ public class EchoSosArticle {
 
 	public void addLove() {
 		EchoSosArticle article = new EchoSosArticle();
-		article.getLove();
-		if (article.equals(0) || !article.equals(0)) {
-			this.love = love + 1;
+		if (article.getLove().equals(0) || !article.getLove().equals(0)) {
+			love = love + 1;
 		} else {
-			this.love = love;
+			love = love + 0;
 		}
 	}
 
-	public String addDate() {
+	public static String addDate() {
 		Date date = new Date();
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
 		return dateFormat.format(date);

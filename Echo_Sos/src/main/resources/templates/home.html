@@ -6,7 +6,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <!-- Main CSS-->
 <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
 <!-- Font-icon css-->
@@ -251,7 +250,8 @@
 	<main class="app-content">
 	<div class="row" style="font-family: sans-serif;">
 		<div class="tile-status-allpha">
-			<form th:action="@{/publishstatus}" method="post">
+			<form th:action="@{/publishstatus}" method="post"
+				enctype="multipart/form-data">
 				<table>
 					<tr>
 						<td colspan="2"><b
@@ -275,12 +275,15 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="file" id="real-file" hidden="" />
-						<button id="custom-button"
+						<td colspan="2"><input type="file" id="real-file" hidden=""
+							name="filests" />
+
+							<button type="button" id="custom-button"
 								style="border: none; border-radius: 20px;"
 								class="btn btn-cyan mr-1 mb-1 ml-3">
 								<i class="fa fa-image text-warning"></i> Join An Image
-							</button><span id="custom-text"></span>
+							</button> <span id="custom-text"></span>
+
 							<button type="submit" style="border: none; border-radius: 20px;"
 								class="btn btn-cyan mr-1 mb-1 ml-4">
 								<i class="fa fa-share"></i> Publish Your Status
@@ -301,10 +304,27 @@
 						class="app-sidebar__user-avatar mr-2 ml-2" width="60px"
 						height="60px"> <b style="font-size: 15px;"
 						class="text-white" th:text="${sts.ownerstatus.plastname}"></b>
-					</a> <br><b class="text-primary">&nbsp Status Publish the <b th:text="${sts.date}"></b></b> 
+					</a> <br> <b class="text-primary">&nbsp Status Publish the <b
+						th:text="${sts.date}"></b></b>
 				</div>
 				<div class="bg-white">
-				<p th:text="${sts.stscontent}">
+					<p class="ml-2" style="font-family: sans-serif; font-size: 13px;"
+						th:text="${sts.stscontent}"></p>
+					<img th:src="@{'/statusimages/'+${sts.idstatus}}" width="100%">
+					<hr>
+					<a style="border-radius: 10px;"
+						th:href="@{/incrementlovestatus/{id}(id=${sts.idstatus})}"
+						class="btn btn-light text-info mr-1 mb-1 ml-4"> <i
+						class="fa fa-thumbs-o-up fa-3x"></i>Like [<b th:text="${sts.love}"></b>]
+					</a> <a style="border-radius: 10px;"
+					th:href="@{/incrementviewstatus/{idview}(idview=${sts.idstatus})}"
+						class="btn btn-light text-primary mr-1 mb-1 ml-4"> <i
+						class="fa fa-eye fa-3x"></i>View [<b th:text="${sts.view}"></b>]
+					</a>
+					<a style="border-radius: 10px;"
+						class="btn btn-light text-danger mr-1 mb-1 ml-4"> <i
+						class="fa fa-deletes fa-3x"></i>Delete 
+					</a>
 				</div>
 			</div>
 		</div>
@@ -380,7 +400,7 @@
 				<hr>
 				<p class="mb-1">
 					<a style="border-radius: 10px;"
-						th:href="@{/incrementLove/{id}(id=${article.id_article})}"
+						th:href="@{/incrementarticlelove/{id}(id=${article.id_article})}"
 						class="btn btn-light text-info mr-1 mb-1 ml-4"> <i
 						class="fa fa-thumbs-o-up fa-3x"></i>Like
 					</a>
@@ -433,9 +453,24 @@
 						<h5 class="card-title">Enterprise Name</h5>
 						<h6 class="card-subtitle text-muted">Video's Comment</h6>
 					</div>
-					<img style="height: 200px; width: 100%; display: block;"
-						src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-						alt="Card image">
+
+					<section id="slideshow">
+						<div class="container">
+							<div class="c_slider"></div>
+							<div class="slider">
+
+								<figure>
+									<img style="height: 200px; width: 450px; display: block;"
+										src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+										alt="Card image">
+									<figcaption>Mero ets 1</figcaption>
+								</figure>
+							</div>
+						</div>
+
+						<span id="timeline"></span>
+					</section>
+
 					<div class="card-body">
 						<button style="border-radius: 5px;"
 							class="btn btn-cyan text-primary ml-4">
@@ -476,7 +511,7 @@
 		</div>
 
 	</aside>
-	
+
 	<!-- Essential javascripts for application to work-->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
@@ -560,25 +595,26 @@
 			ga('send', 'pageview');
 		}
 	</script>
-<!-- script of button upload -->
-<script>
-	const realFileBtn = document.getElementById("real-file");
-	const customBtn = document.getElementById("custom-button");
-	const customTxt = document.getElementById("custom-text");
+	<!-- script of button upload status -->
+	<script>
+		const realFileBtn = document.getElementById("real-file");
+		const customBtn = document.getElementById("custom-button");
+		const customTxt = document.getElementById("custom-text");
 
-customBtn.addEventListener("click", function(){
-	realFileBtn.click();
+		customBtn.addEventListener("click", function() {
+			realFileBtn.click();
 
-});
+		});
 
-realFileBtn.addEventListener("change", function(){
-	if (realFileBtn.value) {
-		customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\. \-\(\)]+)$/)[1];
-	} else{
-		customTxt.innerHTML = "No File Choosen, yet.";
-	}
-});
-</script>
+		realFileBtn.addEventListener("change", function() {
+			if (realFileBtn.value) {
+				customTxt.innerHTML = realFileBtn.value
+						.match(/[\/\\]([\w\d\s\. \-\(\)]+)$/)[1];
+			} else {
+				customTxt.innerHTML = "No File Choosen, yet.";
+			}
+		});
+	</script>
 
 </body>
 </html>

@@ -24,11 +24,11 @@ public class EchoSosArticleService {
 		return articleInterface.findAll();
 	}
 
-	public EchoSosArticle addArticle(EchoSosArticle echoSosArticle) {
-		return articleInterface.save(echoSosArticle);
+	public void addArticle(EchoSosArticle article) {
+		articleInterface.save(article);
 	}
 
-	public void addArticleWithImage(MultipartFile[] files, EchoSosArticle echoSosArticle) throws IOException{
+	public void addArticleWithImage(MultipartFile[] files, EchoSosArticle echoSosArticle) throws IOException {
 
 		echoSosArticle = articleInterface.save(echoSosArticle);
 		int id = echoSosArticle.getId_article();

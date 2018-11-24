@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -86,24 +85,6 @@ public class EchoSosDefaultController {
 		article.getComments().add(addcomments);
 		articleService.addArticle(article);
 		return "redirect:/home";
-	}
-
-	@GetMapping("view-Article/{id}")
-	public String getViewArticle(@PathVariable("id") Integer id, Model model, Principal principal) {
-		EchoSosArticle article1 = articleService.getIdArticle(id);
-		String username = principal.getName();
-		EchoSosAccount user = accountService.getByUsername(Integer.parseInt(username));
-		model.addAttribute("user", user);
-		model.addAttribute("articles", article1);
-		return "home";
-	}
-
-	@GetMapping("incrementLove/{id}")
-	public String addLove(@PathVariable("id") Integer id) {
-		EchoSosArticle article1 = articleService.getIdArticle(id);
-		article1.addLove();
-		articleService.addArticle(article1);
-		return "redirect:/view-Article/" + id;
 	}
 
 	@GetMapping("getgallery")

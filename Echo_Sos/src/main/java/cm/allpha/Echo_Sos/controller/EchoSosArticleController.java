@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,7 +22,7 @@ import cm.allpha.Echo_Sos.service.EchoSosArticleService;
 public class EchoSosArticleController {
 
 	@Autowired
-	private EchoSosArticleService echoSosArticleService;
+	private EchoSosArticleService articleService;
 	@Autowired
 	private EchoSosAccountService accountService;
 	public static String uploadDirectry = System.getProperty("user.dir") + "/src/main/resources/static/uploads";
@@ -36,13 +37,21 @@ public class EchoSosArticleController {
 		return "addArticle";
 	}
 
+	@GetMapping("incrementarticlelove/{id}")
+	public String incrementArticleLove(@PathVariable("id") Integer id) {
+		EchoSosArticle article = articleService.getIdArticle(id);
+		article.addLove();
+		articleService.addArticle(article);
+		return "redirect:/home";
+	}
+
 	@PostMapping("addArticle")
-	public String addArticleWithImg(@ModelAttribute EchoSosArticle echoSosArticle,
+	public String addArticleWithImg(@ModelAttribute EchoSosArticle article,
 			@RequestParam("file") MultipartFile[] files, @RequestParam("userid") Integer userid) throws IOException {
 		EchoSosAccount owner = accountService.getIdAccount(userid);
-		echoSosArticle.setOwnerarticle(owner);
-		echoSosArticle.setDate(echoSosArticle.addDate());
-		echoSosArticleService.addArticleWithImage(files, echoSosArticle);
+		article.setOwnerarticle(owner);
+		article.setDate(EchoSosArticle.addDate());
+		articleService.addArticleWithImage(files, article);
 		return "redirect:/addArticle";
 	}
 
