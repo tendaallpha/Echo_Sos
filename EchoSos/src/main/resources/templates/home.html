@@ -217,7 +217,7 @@
 					class="app-menu__label">ORPHANAGE LIST</span></a></li>
 			<li class="treeview"><a class="app-menu__item" href="message">
 					<i class="app-menu__icon fa fa-envelope-o"></i> <span
-					class="app-menu__label">PARTICIPATION PAYMENT</span>  
+					class="app-menu__label">PARTICIPATION PAYMENT</span>
 			</a></li>
 			<li class="treeview is-expanded"><a class="app-menu__item"
 				th:href="@{/sponsor.html}"> <i
@@ -249,42 +249,44 @@
 
 	<main class="app-content">
 	<div class="row" style="font-family: sans-serif;">
-		<div class="tile-status-allpha">
-			<form th:action="@{/publishstatus}" method="post"
-				enctype="multipart/form-data">
-				<table class="table table-triped">
-					<tr>
-						<td colspan="2"><b
-							style="margin-left: 10px; font-weight: bold; font-size: 16px;"><i
-								class="fa fa-pencil "></i> Create your Status</b></td>
-					</tr>
-					<tr>
-						<td><img class="app-sidebar__user-avatar" width="50px"
-							height="50px" th:src="@{'/profileImages/'+${user.id_account}}"
-							alt="user image"></td>
-						<td><input class="alert alert-white"
-							style="padding-top: 15px; font-family: sans-serif; width: 375px; font-size: 14px; font-weight: bold; border: none;"
-							name="stscomment" placeholder="Edit your Status"
-							required="required"> <input name="userid"
-							th:value="${user.id_account}" type="number" hidden=""></td>
-					</tr>
-					<tr>
-						<td colspan="2"><input type="file" id="real-file" hidden=""
-							name="filests" />
+		<div class="col-md-6" style="border-top-radius: 30px;">
+			<div class="tile-article-allpha">
+				<form th:action="@{/publishstatus}" method="post"
+					enctype="multipart/form-data">
+					<table class="table table-striped">
+						<tr>
+							<td colspan="2"><b
+								style="margin-left: 10px; font-weight: bold; font-size: 16px;"><i
+									class="fa fa-pencil "></i> Create your Status</b></td>
+						</tr>
+						<tr>
+							<td><img class="app-sidebar__user-avatar" width="40px"
+								height="40px" th:src="@{'/profileImages/'+${user.id_account}}"
+								alt="user image"></td>
+							<td><input class="alert alert-white"
+								style="padding-top: 10px; font-family: sans-serif; width: 375px; font-size: 14px; font-weight: bold; border: none;"
+								name="stscomment" placeholder="Edit your Status"
+								required="required"> <input name="userid"
+								th:value="${user.id_account}" type="number" hidden=""></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="file" id="real-file" hidden=""
+								name="filests" />
 
-							<button type="button" id="custom-button"
-								style="border: none; border-radius: 20px;"
-								class="btn btn-cyan mr-1 ml-3">
-								<i class="fa fa-image text-warning"></i> Join An Image
-							</button> <span id="custom-text"></span>
+								<button type="button" id="custom-button"
+									style="border: none; border-radius: 20px;"
+									class="btn btn-cyan mr-1 ml-3">
+									<i class="fa fa-image text-warning"></i> Join An Image
+								</button> <span id="custom-text"></span>
 
-							<button type="submit" style="border: none; border-radius: 20px;"
-								class="btn btn-cyan mr-1 ml-3">
-								<i class="fa fa-share"></i> Publish Your Status
-							</button></td>
-					</tr>
-				</table>
-			</form>
+								<button type="submit" style="border: none; border-radius: 20px;"
+									class="btn btn-cyan mr-1 ml-3">
+									<i class="fa fa-share"></i> Publish Your Status
+								</button></td>
+						</tr>
+					</table>
+				</form>
+			</div>
 		</div>
 	</div>
 
@@ -295,8 +297,8 @@
 				<div class="bg-dark">
 					<a> <img
 						th:src="@{'/profileImages/'+${sts.ownerstatus.id_account}}"
-						class="app-sidebar__user-avatar mr-2 ml-2" width="60px"
-						height="60px"> <b style="font-size: 15px;"
+						class="app-sidebar__user-avatar mr-2 ml-2" width="40px"
+						height="40px"> <b style="font-size: 15px;"
 						class="text-white" th:text="${sts.ownerstatus.plastname}"></b>
 					</a> <br> <b class="text-primary">&nbsp; Status Publish the <b
 						th:text="${sts.date}"></b></b>
@@ -315,6 +317,7 @@
 						class="btn btn-light text-primary mr-1 mb-1 ml-4"> <i
 						class="fa fa-eye fa-3x"></i>View [<b th:text="${sts.view}"></b>]
 					</a> <a style="border-radius: 10px;"
+						th:href="@{/delete/{idsts} (idsts=${sts.idstatus})}"
 						class="btn btn-light text-danger mr-1 mb-1 ml-4"> <i
 						class="fa fa-close fa-3x"></i>Delete
 					</a>
@@ -332,8 +335,8 @@
 						th:href="@{/selfpage.html/{id}(id=${article.ownerarticle.id_account})}">
 						<img
 						th:src="@{'/profileImages/'+${article.ownerarticle.id_account}}"
-						class="app-sidebar__user-avatar mr-2 ml-2" width="60px"
-						height="60px"> <b style="font-size: 15px;"
+						class="app-sidebar__user-avatar mr-2 ml-2" width="40px"
+						height="40px"> <b style="font-size: 15px;"
 						class="text-primary" th:text="${article.ownerarticle.plastname}"></b>
 					</a>
 					<div class="content bg-light">
@@ -396,8 +399,7 @@
 						th:href="@{/incrementarticlelove/{id}(id=${article.id_article})}"
 						class="btn btn-light text-info mr-1 mb-1 ml-4"> <i
 						class="fa fa-thumbs-o-up fa-3x"></i>Like
-					</a>
-					<a style="border-radius: 10px;"
+					</a> <a style="border-radius: 10px;"
 						class="btn btn-light text-primary mr-1 mb-1 ml-4"> <i
 						class="fa fa-gift fa-3x"></i> Send Gift
 					</a>
@@ -405,8 +407,8 @@
 				<form class="form-control" method="post" th:action="@{/home.com}">
 					<table>
 						<tr th:each="comment: ${article.comments}">
-							<td><img class="app-sidebar__user-avatar" width="50px"
-								height="50px"
+							<td><img class="app-sidebar__user-avatar" width="35px"
+								height="35px"
 								th:src="@{'/profileImages/'+${comment.userowner.id_account}}"
 								alt="User Image"></td>
 							<td colspan="2"><p
@@ -420,13 +422,13 @@
 								hidden=""></td>
 						</tr>
 						<tr>
-							<td><img class="app-sidebar__user-avatar" width="50px"
-								height="50px" th:src="@{'/profileImages/'+${user.id_account}}"></td>
+							<td><img class="app-sidebar__user-avatar" width="35px"
+								height="35px" th:src="@{'/profileImages/'+${user.id_account}}"></td>
 							<td><input class="alert alert-secondary"
 								style="margin-top: 5px; font-weight: bold; width: 360px; border-radius: 15px; font-family: sans-serif;"
 								name="comment" placeholder="Write your comment... "
 								required="required" autocomplete="off"></td>
-							<td><button class="btn btn-cyan" type="submit" hidden=""></button></td>
+							<td></td>
 						</tr>
 					</table>
 				</form>
@@ -437,45 +439,27 @@
 
 	<aside class="app-sidebar-right-allpha"
 		style="margin-top: 4%; font-family: sans-serif;">
-		<div class="col-lg-12 mb-4">
+		<div class="col-lg-12 mb-2">
 			<div class="bs-component">
 				<div class="card">
-					<h4 class="card-header">
-						Last Status
-						<button
-							style="font-size: 12px; border-radius: 5px; margin-left: 190px;"
-							class="btn btn-cyan text-primary">Create your publicity</button>
-					</h4>
+					<h4 class="card-header">YOU KNOW THIS CENTER? </h4>
 					<div class="card-body">
-						<p class="card-subtitle text-muted">Status Comment....</p>
+						<p class="card-subtitle text-muted">
+						<i class="icon fa fa-home fa-lg"></i> Name ....</p>
+						<p class="card-subtitle text-muted mt-1">
+						<i class="icon fa fa-flag fa-lg"></i> country ....</p>
+						<p class="card-subtitle text-muted mt-1">
+						<i class="icon fa fa-chevron-right fa-lg"></i> town ....</p>
 					</div>
-
-					<section id="slideshow">
-						<div class="container">
-							<div class="c_slider"></div>
-							<div class="slider">
-
-								<figure>
-									<img style="height: 200px; width: 450px; display: block;"
-										src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-										alt="Card image">
-									<figcaption> Current User Name </figcaption>
-								</figure>
-							</div>
-						</div>
-					</section>
-
-					<div class="card-body">
-						<button style="border-radius: 5px;"
-							class="btn btn text-primary ml-4">
-							<i class="fa fa-eye"></i>  [0]
-						</button>
-						<button style="border-radius: 5px;"
-							class="btn btn text-info ml-4">
-							<i class="icon fa fa-thumbs-o-up fa-lg"></i>  [0]
-						</button>
-					</div>
+					<img class="card-img" style="height: 155px;"
+						th:src="@{/fonts/labc.jpg}" alt="Card image">
 				</div>
+			</div>
+			<div class="card-footer text-muted">
+				<button style="border-radius: 5px;"
+					class="btn text-info ml-3">
+					Yes i know this Center &nbsp; <i class="fa fa-thumbs-o-up fa-lg"></i> 
+				</button>
 			</div>
 		</div>
 
@@ -486,12 +470,12 @@
 					<div class="card-body">
 						<table>
 							<tr>
-								<td><img class="app-sidebar__user-avatar" width="50px"
-									height="50px" th:src="@{/fonts/manProfile.jpg}"
+								<td><img class="app-sidebar__user-avatar" width="35px"
+									height="35px" th:src="@{/fonts/manProfile.jpg}"
 									alt="User Image"></td>
 								<td><p
-										style="font-size: 12px; border-color: white; font-weight: bold; border-radius: 60px; padding-top: 2px;"
-										class="alert alert-secondary">Association Name</td>
+										style="font-size: 12px; border-color: white; font-weight: bold; border-radius: 60px; padding-top: 4px;"
+										class="mt-2">Association Name</td>
 								<td><button class="btn btn-cyan" type="submit" hidden="">
 										Comment</button></td>
 							</tr>
@@ -505,6 +489,52 @@
 		</div>
 
 	</aside>
+
+	<section class="section-right-allpha">
+		<div class="tile bg-secondary text-light" style="font-size: 15px; text-align: center;">
+			<i class="icon fa fa-users fa-lg"></i> &nbsp; Our community
+		</div>
+		<div class="col-lg-12">
+			<table>
+				<tr>
+					<td><img class="app-sidebar__user-avatar" width="35px"
+						height="35px" th:src="@{/fonts/manProfile.jpg}" alt="User Image"></td>
+					<td><p
+							style="font-size: 12px; border-color: white; font-weight: bold; border-radius: 60px; padding-top: 2px;"
+							class="bg bg-cyan mt-2 text-muted">User Name</td>
+					<td> <i class="fa fa-user fa-lg"></i></td>
+					<td> <i class="fa fa-circle text-success"></i></td>
+				</tr>
+				<tr>
+					<td><img class="app-sidebar__user-avatar" width="35px"
+						height="35px" th:src="@{/fonts/manProfile.jpg}" alt="User Image"></td>
+					<td><p
+							style="font-size: 12px; border-color: white; font-weight: bold; border-radius: 60px; padding-top: 2px;"
+							class="bg bg-cyan mt-2 text-muted">la bonne case</td>
+							<td> <i class="fa fa-home fa-lg"></i></td>
+					<td> <i class="fa fa-circle text-secondary"></i> </td>
+				</tr>
+				<tr>
+					<td><img class="app-sidebar__user-avatar" width="35px"
+						height="35px" th:src="@{/fonts/manProfile.jpg}" alt="User Image"></td>
+					<td><p
+							style="font-size: 12px; border-color: white; font-weight: bold; border-radius: 60px; padding-top: 2px;"
+							class="bg bg-cyan mt-2 text-muted">les jeunes filles</td>
+							<td> <i class="fa fa-home fa-lg"></i></td>
+					<td> <i class="fa fa-circle text-success"></i> </td>
+				</tr>
+				<tr>
+					<td><img class="app-sidebar__user-avatar" width="35px"
+						height="35px" th:src="@{/fonts/manProfile.jpg}" alt="User Image"></td>
+					<td><p
+							style="font-size: 12px; border-color: white; font-weight: bold; border-radius: 60px; padding-top: 2px;"
+							class="bg bg-cyan mt-2 text-muted">mbonwo</td>
+							<td> <i class="fa fa-user fa-lg"></i></td>
+					<td> <i class="fa fa-circle text-success"></i> </td>
+				</tr>
+			</table>
+		</div>
+	</section>
 
 	<!-- Essential javascripts for application to work-->
 	<script src="js/jquery-3.2.1.min.js"></script>

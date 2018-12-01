@@ -199,50 +199,94 @@ a:hover {
 a
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 [
 href
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 tabindex
 ]
 
+
+
  
+
+
 
 )
 {
 color
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 inherit
+
+
+
+
 
 
 ;
 text-decoration
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 none
+
+
+
+
 
 
 ;
@@ -281,25 +325,49 @@ img {
 svg
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :root
 
+
+
  
+
+
 
 )
 {
 overflow
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 hidden
+
+
+
+
 
 
 ;
@@ -530,26 +598,50 @@ mark, .mark {
 .list-inline-item
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :last-child
 
+
+
  
+
+
 
 )
 {
 margin-right
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 0
 .5rem
+
+
+
+
 
 
 ;
@@ -2090,42 +2182,78 @@ pre code {
 select
 
 
+
+
+
+
 .form-control
+
+
+
+
 
 
 :not
 
+
+
  
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 )
 {
 height
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 calc
+
+
+
+
 
 
 (2
@@ -2133,6 +2261,10 @@ calc
 +
 4
 px
+
+
+
+
 
 
 );
@@ -2207,64 +2339,112 @@ select.form-control:focus::-ms-value {
 select
 
 
+
+
+
+
 .form-control-sm
+
+
+
+
 
 
 :not
 
+
+
  
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-sm
 >
 select
+
+
+
+
 
 
 .form-control
 
 
+
+
+
+
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-sm
@@ -2274,32 +2454,56 @@ multiple
 select
 
 
+
+
+
+
 .input-group-text
+
+
+
+
 
 
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-sm
@@ -2309,32 +2513,56 @@ multiple
 select
 
 
+
+
+
+
 .input-group-text
+
+
+
+
 
 
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-sm
@@ -2344,32 +2572,56 @@ multiple
 select
 
 
+
+
+
+
 .btn
+
+
+
+
 
 
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-sm
@@ -2379,43 +2631,79 @@ multiple
 select
 
 
+
+
+
+
 .btn
+
+
+
+
 
 
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 )
 {
 height
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 calc
+
+
+
+
 
 
 (1
@@ -2423,6 +2711,10 @@ calc
 +
 4
 px
+
+
+
+
 
 
 );
@@ -2439,64 +2731,112 @@ px
 select
 
 
+
+
+
+
 .form-control-lg
+
+
+
+
 
 
 :not
 
+
+
  
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-lg
 >
 select
+
+
+
+
 
 
 .form-control
 
 
+
+
+
+
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-lg
@@ -2506,32 +2846,56 @@ multiple
 select
 
 
+
+
+
+
 .input-group-text
+
+
+
+
 
 
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-lg
@@ -2541,32 +2905,56 @@ multiple
 select
 
 
+
+
+
+
 .input-group-text
+
+
+
+
 
 
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-lg
@@ -2576,32 +2964,56 @@ multiple
 select
 
 
+
+
+
+
 .btn
+
+
+
+
 
 
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 ),
 .input-group-lg
@@ -2611,43 +3023,79 @@ multiple
 select
 
 
+
+
+
+
 .btn
+
+
+
+
 
 
 :not
 
 
+
+
 	
+
+
 
 (
 [
 size
 ]
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 [
 multiple
 ]
 
+
+
  
+
+
 
 )
 {
 height
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 calc
+
+
+
+
 
 
 (2
@@ -2655,6 +3103,10 @@ calc
 +
 4
 px
+
+
+
+
 
 
 );
@@ -3081,35 +3533,67 @@ px
 .btn
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :disabled
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 .disabled
 
+
+
  
+
+
 
 )
 {
 cursor
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 pointer
+
+
+
+
 
 
 ;
@@ -4164,14 +4648,26 @@ tbody.collapse.show {
 .form-control
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :last-child
 
+
+
  
+
+
 
 ),
 .input-group
@@ -4179,32 +4675,60 @@ tbody.collapse.show {
 .custom-select
 
 
+
+
+
+
 :not
+
+
 
 
 	
 
+
+
 (
 :last-child
 
+
+
  
+
+
 
 )
 {
 border-top-right-radius
 
 
+
+
+
+
 :
 
+
+
  
+
+
 
 0;
 border-bottom-right-radius
 
 
+
+
+
+
 :
 
+
+
  
+
+
 
 0;
 }
@@ -4213,14 +4737,26 @@ border-bottom-right-radius
 .form-control
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :first-child
 
+
+
  
+
+
 
 ),
 .input-group
@@ -4228,32 +4764,60 @@ border-bottom-right-radius
 .custom-select
 
 
+
+
+
+
 :not
+
+
 
 
 	
 
+
+
 (
 :first-child
 
+
+
  
+
+
 
 )
 {
 border-top-left-radius
 
 
+
+
+
+
 :
 
+
+
  
+
+
 
 0;
 border-bottom-left-radius
 
 
+
+
+
+
 :
 
+
+
  
+
+
 
 0;
 }
@@ -4349,14 +4913,26 @@ border-bottom-left-radius
 .input-group-append
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :last-child
 
+
+
  
+
+
 
 )
 >
@@ -4367,15 +4943,27 @@ border-bottom-left-radius
 .input-group-append
 
 
+
+
+
+
 :not
+
+
 
 
 	
 
+
+
 (
 :last-child
 
+
+
  
+
+
 
 )
 >
@@ -4386,30 +4974,54 @@ border-bottom-left-radius
 .input-group-append
 
 
+
+
+
+
 :last-child
 >
 .btn
 
 
+
+
+
+
 :not
+
+
 
 
 	
 
+
+
 (
 :last-child
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 .dropdown-toggle
 
+
+
  
+
+
 
 ),
 .input-group
@@ -4417,37 +5029,69 @@ border-bottom-left-radius
 .input-group-append
 
 
+
+
+
+
 :last-child
 >
 .input-group-text
 
 
+
+
+
+
 :not
+
+
 
 
 	
 
+
+
 (
 :last-child
 
+
+
  
+
+
 
 )
 {
 border-top-right-radius
 
 
+
+
+
+
 :
 
+
+
  
+
+
 
 0;
 border-bottom-right-radius
 
 
+
+
+
+
 :
 
+
+
  
+
+
 
 0;
 }
@@ -4468,14 +5112,26 @@ border-bottom-right-radius
 .input-group-prepend
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :first-child
 
+
+
  
+
+
 
 )
 >
@@ -4486,14 +5142,26 @@ border-bottom-right-radius
 .input-group-prepend
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :first-child
 
+
+
  
+
+
 
 )
 >
@@ -4504,19 +5172,35 @@ border-bottom-right-radius
 .input-group-prepend
 
 
+
+
+
+
 :first-child
 >
 .btn
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :first-child
 
+
+
  
+
+
 
 ),
 .input-group
@@ -4524,37 +5208,69 @@ border-bottom-right-radius
 .input-group-prepend
 
 
+
+
+
+
 :first-child
 >
 .input-group-text
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :first-child
 
 
+
+
 	
+
+
 
 )
 {
 border-top-left-radius
 
 
+
+
+
+
 :
 
+
+
  
+
+
 
 0;
 border-bottom-left-radius
 
 
+
+
+
+
 :
 
+
+
  
+
+
 
 0;
 }
@@ -4726,6 +5442,10 @@ border-bottom-left-radius
 .custom-select
 
 
+
+
+
+
 [
 multiple
 ]
@@ -4733,14 +5453,26 @@ multiple
 .custom-select
 
 
+
+
+
+
 [
 size
 ]
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 [
@@ -4749,41 +5481,81 @@ size
 "1"
 ]
 
+
+
  
+
+
 
 )
 {
 height
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 auto
+
+
+
+
 
 
 ;
 padding-right
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 0
 .75rem
+
+
+
+
 
 
 ;
 background-image
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 none
+
+
+
+
 
 
 ;
@@ -5067,35 +5839,67 @@ none
 .navbar-toggler
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :disabled
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 .disabled
 
+
+
  
+
+
 
 )
 {
 cursor
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 pointer
+
+
+
+
 
 
 ;
@@ -5718,44 +6522,80 @@ pointer
 	.card
 	
 	
+	
+	
+	
+	
 	:not
 	
+	
+	
 	 
+	
+	
 	
 	(
 	:first-child
 	
+	
+	
 	 
+	
+	
 	
 	)
 	:not
 	
+	
+	
 	 
+	
+	
 	
 	(
 	:last-child
 	
+	
+	
 	 
+	
+	
 	
 	)
 	:not
 	
+	
+	
 	 
+	
+	
 	
 	(
 	:only-child
 	
 	
+	
+	
 		
+	
+	
 	
 	)
 	{
 	border-radius
 	
 	
+	
+	
+	
+	
 	:
 	
+	
+	
 	 
+	
+	
 	
 	0;
 }
@@ -5856,35 +6696,67 @@ pointer
 .page-link
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :disabled
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 .disabled
 
+
+
  
+
+
 
 )
 {
 cursor
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 pointer
+
+
+
+
 
 
 ;
@@ -6536,35 +7408,67 @@ to {
 .close
 
 
+
+
+
+
 :not
 
+
+
  
+
+
 
 (
 :disabled
 
+
+
  
+
+
 
 )
 :not
 
+
+
  
+
+
 
 (
 .disabled
 
+
+
  
+
+
 
 )
 {
 cursor
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 pointer
+
+
+
+
 
 
 ;
@@ -6719,23 +7623,43 @@ button.close {
 >
 :not
 
+
+
  
+
+
 
 (
 :first-child
 
+
+
  
+
+
 
 )
 {
 margin-left
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 .25rem
+
+
+
+
 
 
 ;
@@ -6744,23 +7668,43 @@ margin-left
 >
 :not
 
+
+
  
+
+
 
 (
 :last-child
 
+
+
  
+
+
 
 )
 {
 margin-right
 
 
+
+
+
+
 :
+
+
 
  
 
+
+
 .25rem
+
+
+
+
 
 
 ;
@@ -9899,25 +10843,49 @@ a.text-dark:hover, a.text-dark:focus {
 	a
 	
 	
+	
+	
+	
+	
 	:not
 	
+	
+	
 	 
+	
+	
 	
 	(
 	.btn
 	
+	
+	
 	 
+	
+	
 	
 	)
 	{
 	text-decoration
 	
 	
+	
+	
+	
+	
 	:
+	
+	
 	
 	 
 	
+	
+	
 	underline
+	
+	
+	
+	
 	
 	
 	;
@@ -11510,10 +12478,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11521,8 +12497,16 @@ scale
 
 
 
+
+
+
+
 (1
 .05
+
+
+
+
 
 
 
@@ -11533,10 +12517,18 @@ scale
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11544,8 +12536,16 @@ scale
 
 
 
+
+
+
+
 (1
 .05
+
+
+
+
 
 
 
@@ -11559,10 +12559,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11570,8 +12578,16 @@ scale
 
 
 
+
+
+
+
 (0
 .95
+
+
+
+
 
 
 
@@ -11582,10 +12598,18 @@ scale
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11593,8 +12617,16 @@ scale
 
 
 
+
+
+
+
 (0
 .95
+
+
+
+
 
 
 
@@ -11608,13 +12640,25 @@ transform
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -11625,13 +12669,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -11652,10 +12708,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11663,8 +12727,16 @@ scale
 
 
 
+
+
+
+
 (1
 .05
+
+
+
+
 
 
 
@@ -11675,10 +12747,18 @@ scale
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11686,8 +12766,16 @@ scale
 
 
 
+
+
+
+
 (1
 .05
+
+
+
+
 
 
 
@@ -11701,10 +12789,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11712,8 +12808,16 @@ scale
 
 
 
+
+
+
+
 (0
 .95
+
+
+
+
 
 
 
@@ -11724,10 +12828,18 @@ scale
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11735,8 +12847,16 @@ scale
 
 
 
+
+
+
+
 (0
 .95
+
+
+
+
 
 
 
@@ -11750,13 +12870,25 @@ transform
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -11767,13 +12899,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -11794,10 +12938,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11805,8 +12957,16 @@ scale
 
 
 
+
+
+
+
 (0
 .5
+
+
+
+
 
 
 
@@ -11817,10 +12977,18 @@ scale
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11828,8 +12996,16 @@ scale
 
 
 
+
+
+
+
 (0
 .5
+
+
+
+
 
 
 
@@ -11850,10 +13026,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11861,8 +13045,16 @@ scale
 
 
 
+
+
+
+
 (0
 .5
+
+
+
+
 
 
 
@@ -11873,10 +13065,18 @@ scale
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -11884,8 +13084,16 @@ scale
 
 
 
+
+
+
+
 (0
 .5
+
+
+
+
 
 
 
@@ -11905,10 +13113,18 @@ top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 50%;
@@ -11926,10 +13142,18 @@ top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 50%;
@@ -11947,10 +13171,18 @@ top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0%;
@@ -11968,10 +13200,18 @@ top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0%;
@@ -11989,10 +13229,18 @@ top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 50%;
@@ -12010,10 +13258,18 @@ top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 50%;
@@ -12031,10 +13287,18 @@ top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 70%;
@@ -12052,10 +13316,18 @@ top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 70%;
@@ -12115,10 +13387,18 @@ width
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0;
@@ -12127,14 +13407,26 @@ left
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 1
 px
+
+
+
+
 
 
 
@@ -12145,14 +13437,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 19
 px
+
+
+
+
 
 
 
@@ -12166,14 +13470,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 50
 px
+
+
+
+
 
 
 
@@ -12184,14 +13500,26 @@ left
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 -8
 px
+
+
+
+
 
 
 
@@ -12202,14 +13530,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 37
 px
+
+
+
+
 
 
 
@@ -12223,14 +13563,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 17
 px
+
+
+
+
 
 
 
@@ -12241,14 +13593,26 @@ left
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 21
 px
+
+
+
+
 
 
 
@@ -12259,14 +13623,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 48
 px
+
+
+
+
 
 
 
@@ -12280,14 +13656,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 25
 px
+
+
+
+
 
 
 
@@ -12298,14 +13686,26 @@ left
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 14
 px
+
+
+
+
 
 
 
@@ -12316,14 +13716,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 45
 px
+
+
+
+
 
 
 
@@ -12345,10 +13757,18 @@ width
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0;
@@ -12357,14 +13777,26 @@ left
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 1
 px
+
+
+
+
 
 
 
@@ -12375,14 +13807,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 19
 px
+
+
+
+
 
 
 
@@ -12396,14 +13840,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 50
 px
+
+
+
+
 
 
 
@@ -12414,14 +13870,26 @@ left
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 -8
 px
+
+
+
+
 
 
 
@@ -12432,14 +13900,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 37
 px
+
+
+
+
 
 
 
@@ -12453,14 +13933,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 17
 px
+
+
+
+
 
 
 
@@ -12471,14 +13963,26 @@ left
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 21
 px
+
+
+
+
 
 
 
@@ -12489,14 +13993,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 48
 px
+
+
+
+
 
 
 
@@ -12510,14 +14026,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 25
 px
+
+
+
+
 
 
 
@@ -12528,14 +14056,26 @@ left
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 14
 px
+
+
+
+
 
 
 
@@ -12546,14 +14086,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 45
 px
+
+
+
+
 
 
 
@@ -12575,10 +14127,18 @@ width
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0;
@@ -12587,14 +14147,26 @@ right
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 46
 px
+
+
+
+
 
 
 
@@ -12605,14 +14177,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 54
 px
+
+
+
+
 
 
 
@@ -12626,14 +14210,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 55
 px
+
+
+
+
 
 
 
@@ -12644,14 +14240,26 @@ right
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 0
 px
+
+
+
+
 
 
 
@@ -12662,14 +14270,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 35
 px
+
+
+
+
 
 
 
@@ -12683,14 +14303,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 47
 px
+
+
+
+
 
 
 
@@ -12701,14 +14333,26 @@ right
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 8
 px
+
+
+
+
 
 
 
@@ -12719,14 +14363,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 38
 px
+
+
+
+
 
 
 
@@ -12748,10 +14404,18 @@ width
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0;
@@ -12760,14 +14424,26 @@ right
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 46
 px
+
+
+
+
 
 
 
@@ -12778,14 +14454,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 54
 px
+
+
+
+
 
 
 
@@ -12799,14 +14487,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 55
 px
+
+
+
+
 
 
 
@@ -12817,14 +14517,26 @@ right
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 0
 px
+
+
+
+
 
 
 
@@ -12835,14 +14547,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 35
 px
+
+
+
+
 
 
 
@@ -12856,14 +14580,26 @@ width
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 47
 px
+
+
+
+
 
 
 
@@ -12874,14 +14610,26 @@ right
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 8
 px
+
+
+
+
 
 
 
@@ -12892,14 +14640,26 @@ top
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 38
 px
+
+
+
+
 
 
 
@@ -12920,10 +14680,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -12931,8 +14699,16 @@ rotate
 
 
 
+
+
+
+
 (-45
 deg
+
+
+
+
 
 
 );
@@ -12941,10 +14717,18 @@ deg
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -12952,8 +14736,16 @@ rotate
 
 
 
+
+
+
+
 (-45
 deg
+
+
+
+
 
 
 );
@@ -12965,10 +14757,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -12976,8 +14776,16 @@ rotate
 
 
 
+
+
+
+
 (-405
 deg
+
+
+
+
 
 
 );
@@ -12986,10 +14794,18 @@ deg
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -12997,8 +14813,16 @@ rotate
 
 
 
+
+
+
+
 (-405
 deg
+
+
+
+
 
 
 );
@@ -13010,10 +14834,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13021,8 +14853,16 @@ rotate
 
 
 
+
+
+
+
 (-405
 deg
+
+
+
+
 
 
 );
@@ -13031,10 +14871,18 @@ deg
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13042,8 +14890,16 @@ rotate
 
 
 
+
+
+
+
 (-405
 deg
+
+
+
+
 
 
 );
@@ -13062,10 +14918,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13073,8 +14937,16 @@ rotate
 
 
 
+
+
+
+
 (-45
 deg
+
+
+
+
 
 
 );
@@ -13083,10 +14955,18 @@ deg
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13094,8 +14974,16 @@ rotate
 
 
 
+
+
+
+
 (-45
 deg
+
+
+
+
 
 
 );
@@ -13107,10 +14995,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13118,8 +15014,16 @@ rotate
 
 
 
+
+
+
+
 (-405
 deg
+
+
+
+
 
 
 );
@@ -13128,10 +15032,18 @@ deg
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13139,8 +15051,16 @@ rotate
 
 
 
+
+
+
+
 (-405
 deg
+
+
+
+
 
 
 );
@@ -13152,10 +15072,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13163,8 +15091,16 @@ rotate
 
 
 
+
+
+
+
 (-405
 deg
+
+
+
+
 
 
 );
@@ -13173,10 +15109,18 @@ deg
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13184,8 +15128,16 @@ rotate
 
 
 
+
+
+
+
 (-405
 deg
+
+
+
+
 
 
 );
@@ -13220,10 +15172,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotateX
@@ -13231,8 +15191,16 @@ rotateX
 
 
 
+
+
+
+
 (0
 deg
+
+
+
+
 
 
 );
@@ -13241,13 +15209,25 @@ deg
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 rotateX
+
+
+
+
 
 
 
@@ -13256,8 +15236,16 @@ rotateX
 deg
 
 
+
+
+
+
 );
 opacity
+
+
+
+
 
 
 
@@ -13265,7 +15253,11 @@ opacity
 :
 
 
+
+
  
+
+
 
 
 1;
@@ -13285,10 +15277,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotateX
@@ -13296,8 +15296,16 @@ rotateX
 
 
 
+
+
+
+
 (0
 deg
+
+
+
+
 
 
 );
@@ -13306,13 +15314,25 @@ deg
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 rotateX
+
+
+
+
 
 
 
@@ -13321,8 +15341,16 @@ rotateX
 deg
 
 
+
+
+
+
 );
 opacity
+
+
+
+
 
 
 
@@ -13330,7 +15358,11 @@ opacity
 :
 
 
+
+
  
+
+
 
 
 1;
@@ -13356,10 +15388,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -13367,8 +15407,16 @@ scale
 
 
 
+
+
+
+
 (0
 .4
+
+
+
+
 
 
 
@@ -13379,13 +15427,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -13396,8 +15456,16 @@ scale
 
 
 
+
+
+
+
 );
 margin-top
+
+
+
+
 
 
 
@@ -13405,11 +15473,19 @@ margin-top
 :
 
 
+
+
  
+
+
 
 
 26
 px
+
+
+
+
 
 
 
@@ -13420,10 +15496,18 @@ opacity
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0;
@@ -13435,10 +15519,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -13446,8 +15538,16 @@ scale
 
 
 
+
+
+
+
 (1
 .15
+
+
+
+
 
 
 
@@ -13458,13 +15558,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -13475,8 +15587,16 @@ scale
 
 
 
+
+
+
+
 );
 margin-top
+
+
+
+
 
 
 
@@ -13484,11 +15604,19 @@ margin-top
 :
 
 
+
+
  
+
+
 
 
 -6
 px
+
+
+
+
 
 
 
@@ -13502,13 +15630,25 @@ transform
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -13519,13 +15659,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -13536,10 +15688,18 @@ margin-top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0;
@@ -13548,10 +15708,18 @@ opacity
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 1;
@@ -13572,10 +15740,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -13583,8 +15759,16 @@ scale
 
 
 
+
+
+
+
 (0
 .4
+
+
+
+
 
 
 
@@ -13595,13 +15779,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -13612,8 +15808,16 @@ scale
 
 
 
+
+
+
+
 );
 margin-top
+
+
+
+
 
 
 
@@ -13621,11 +15825,19 @@ margin-top
 :
 
 
+
+
  
+
+
 
 
 26
 px
+
+
+
+
 
 
 
@@ -13636,10 +15848,18 @@ opacity
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0;
@@ -13651,10 +15871,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -13662,8 +15890,16 @@ scale
 
 
 
+
+
+
+
 (1
 .15
+
+
+
+
 
 
 
@@ -13674,13 +15910,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -13691,8 +15939,16 @@ scale
 
 
 
+
+
+
+
 );
 margin-top
+
+
+
+
 
 
 
@@ -13700,11 +15956,19 @@ margin-top
 :
 
 
+
+
  
+
+
 
 
 -6
 px
+
+
+
+
 
 
 
@@ -13718,13 +15982,25 @@ transform
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -13735,13 +16011,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -13752,10 +16040,18 @@ margin-top
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 0;
@@ -13764,10 +16060,18 @@ opacity
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 1;
@@ -13790,13 +16094,25 @@ border-color
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 #F8BB86
+
+
+
+
 
 
 
@@ -13816,13 +16132,25 @@ border-color
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 #F8BB86
+
+
+
+
 
 
 
@@ -13847,13 +16175,25 @@ background-color
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 #F8BB86
+
+
+
+
 
 
 
@@ -13873,13 +16213,25 @@ background-color
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 #F8BB86
+
+
+
+
 
 
 
@@ -13905,10 +16257,18 @@ background-color
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13916,8 +16276,16 @@ rotate
 
 
 
+
+
+
+
 (360
 deg
+
+
+
+
 
 
 );
@@ -13926,10 +16294,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13937,8 +16313,16 @@ rotate
 
 
 
+
+
+
+
 (360
 deg
+
+
+
+
 
 
 );
@@ -13957,10 +16341,18 @@ keyframes rotate-loading { 0% {
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13968,8 +16360,16 @@ rotate
 
 
 
+
+
+
+
 (360
 deg
+
+
+
+
 
 
 );
@@ -13978,10 +16378,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -13989,8 +16397,16 @@ rotate
 
 
 
+
+
+
+
 (360
 deg
+
+
+
+
 
 
 );
@@ -16597,7 +19013,7 @@ be a descendant of the grid when it is being dragged.
 	position: relative;
 	background: #ffffff;
 	border-radius: 3px;
-	padding:20px;
+	padding: 20px;
 	-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
 		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
@@ -16795,10 +19211,18 @@ be a descendant of the grid when it is being dragged.
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -16806,8 +19230,16 @@ scale
 
 
 
+
+
+
+
 (1
 .4
+
+
+
+
 
 
 
@@ -16818,10 +19250,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -16829,8 +19269,16 @@ scale
 
 
 
+
+
+
+
 (1
 .4
+
+
+
+
 
 
 
@@ -16844,13 +19292,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -16861,13 +19321,25 @@ transform
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -16888,10 +19360,18 @@ keyframes tick { 0% {
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -16899,8 +19379,16 @@ scale
 
 
 
+
+
+
+
 (1
 .4
+
+
+
+
 
 
 
@@ -16911,10 +19399,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 scale
@@ -16922,8 +19418,16 @@ scale
 
 
 
+
+
+
+
 (1
 .4
+
+
+
+
 
 
 
@@ -16937,13 +19441,25 @@ scale
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -16954,13 +19470,25 @@ transform
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 scale
+
+
+
+
 
 
 
@@ -17093,10 +19621,18 @@ opacity
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 1;
@@ -17105,13 +19641,25 @@ opacity
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 translateX
+
+
+
+
 
 
 
@@ -17122,13 +19670,25 @@ transform
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 translateX
+
+
+
+
 
 
 
@@ -17150,10 +19710,18 @@ opacity
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 1;
@@ -17162,13 +19730,25 @@ opacity
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 translateX
+
+
+
+
 
 
 
@@ -17179,13 +19759,25 @@ transform
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 translateX
+
+
+
+
 
 
 
@@ -17272,10 +19864,18 @@ stroke-dasharray
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 89,200;
@@ -17284,14 +19884,26 @@ stroke-dashoffset
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 -35
 px
+
+
+
+
 
 
 
@@ -17305,10 +19917,18 @@ stroke-dasharray
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 89,200;
@@ -17317,14 +19937,26 @@ stroke-dashoffset
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 -124
 px
+
+
+
+
 
 
 
@@ -17345,10 +19977,18 @@ stroke-dasharray
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 89,200;
@@ -17357,14 +19997,26 @@ stroke-dashoffset
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 -35
 px
+
+
+
+
 
 
 
@@ -17378,10 +20030,18 @@ stroke-dasharray
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 89,200;
@@ -17390,14 +20050,26 @@ stroke-dashoffset
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 -124
 px
+
+
+
+
 
 
 
@@ -17434,10 +20106,18 @@ px
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -17445,8 +20125,16 @@ rotate
 
 
 
+
+
+
+
 (360
 deg
+
+
+
+
 
 
 );
@@ -17455,10 +20143,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -17466,8 +20162,16 @@ rotate
 
 
 
+
+
+
+
 (360
 deg
+
+
+
+
 
 
 );
@@ -17486,10 +20190,18 @@ keyframes bSpinner { 0% {
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -17497,8 +20209,16 @@ rotate
 
 
 
+
+
+
+
 (360
 deg
+
+
+
+
 
 
 );
@@ -17507,10 +20227,18 @@ transform
 
 
 
+
+
+
+
 :
 
 
+
+
  
+
+
 
 
 rotate
@@ -17518,8 +20246,16 @@ rotate
 
 
 
+
+
+
+
 (360
 deg
+
+
+
+
 
 
 );
@@ -18129,13 +20865,12 @@ deg
 	position: fixed;
 	top: -0;
 	bottom: -0;
-	left: 59%;
-	padding-top: 70px;
-	width: 517px;
+	left: 58%;
+	padding-top: 8px;
+	width: 329px;
 	overflow: auto;
 	z-index: 10;
 	background: #ffffff;
-	padding: 7px;
 	-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
 		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
@@ -18145,6 +20880,20 @@ deg
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	min-height: calc(100vh - 60px);
+}
+
+.section-right-allpha {
+	position: fixed;
+	top: -0;
+	bottom: -0;
+	left: 83%;
+	padding-top: 61px;
+	width: 226px;
+	overflow: auto;
+	z-index: 10;
+	color: #212529;
+	border: gray solid;
+	margin-bottom: 0;
 }
 
 .tile-allpha {
@@ -18157,7 +20906,7 @@ deg
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
 		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 	margin-bottom: 10px;
-	margin-top:5px;
+	margin-top: 5px;
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
@@ -18188,7 +20937,7 @@ deg
 	position: relative;
 	background: #ffffff;
 	border-radius: 3px;
-	padding-top:5px;
+	padding-top: 5px;
 	-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
 		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
@@ -18199,43 +20948,45 @@ deg
 	transition: all 0.3s ease-in-out;
 }
 
-#showcase{
-			min-height: 150px;
-			color: #fff;
-			text-align: left;
-		}
-		#showcase .bg-image{
-			position: absolute;
-			background: #333 url('/fonts/labc.jpg');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			width: 100%;
-			height: 150px;
-			z-index: -1;
-			opacity: 0.9;
-		}
-		#showcase img {
-			padding-top: 2px;
-			padding-bottom: 2px;
-			padding-left: 2px;
-			padding-right: 2px;
-			margin-top: 30px;
-			margin-left: 30px;
-			margin-bottom: 0px;
-			width: 100px;
-			height: 100px;
-			border-radius: 5px;
-			background: #ffffff;
-			border-radius: 3px;
-			-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
+#showcase {
+	min-height: 150px;
+	color: #fff;
+	text-align: left;
+}
+
+#showcase .bg-image {
+	position: absolute;
+	background: transparent url("../fonts/labc.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 150px;
+	z-index: -1;
+	opacity: 0.9;
+}
+
+#showcase img {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-top: 30px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+	background: #ffffff;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
 		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
 		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-			-webkit-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-		}
+}
 
 .mr-20-allpha, .mx-20-allpha {
 	margin-right: 20rem !important;
@@ -18254,6 +21005,5 @@ deg
 	padding-top: 54px;
 	width: 2017px;
 }
-
 
 /*  16596 tile */

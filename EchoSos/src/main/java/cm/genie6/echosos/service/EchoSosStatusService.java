@@ -21,7 +21,7 @@ public class EchoSosStatusService {
 	private EchoSosStatusInterface statusInterface;
 
 	public List<EchoSosStatus> getAllStatus() {
-		return statusInterface.findAll();
+		return statusInterface.findAllByOrderByIdstatusDesc();
 	}
 
 	public void saveStatus(EchoSosStatus status) {
@@ -39,5 +39,9 @@ public class EchoSosStatusService {
 
 	public EchoSosStatus getIdStatus(Integer id) {
 		return statusInterface.findById(id).get();
+	}
+	public void deleteStatus(Integer id) {
+		EchoSosStatus status = new EchoSosStatus();
+		
 	}
 }
