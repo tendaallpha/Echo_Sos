@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import cm.genie6.echosos.model.EchoSosAccount;
 import cm.genie6.echosos.model.EchoSosStatus;
-import cm.genie6.echosos.persistence.EchoSosStatusInterface;
 import cm.genie6.echosos.service.EchoSosAccountService;
 import cm.genie6.echosos.service.EchoSosStatusService;
 
@@ -24,8 +22,7 @@ public class EchoSosStatusController {
 	private EchoSosStatusService statusService;
 	@Autowired
 	private EchoSosAccountService accountService;
-	@Autowired
-	private EchoSosStatusInterface sosStatusInterface;
+
 
 	public static final String STATUSIMAGES = System.getProperty("user.dir")
 			+ "/src/main/resources/static/statusimages";
@@ -55,10 +52,9 @@ public class EchoSosStatusController {
 		statusService.saveStatus(status);
 		return HOME;
 	}
-//	@DeleteMapping("/delete/{idsts}")
-//	public String delete(@PathVariable("idsts") Integer id) {
-//		EchoSosStatus status = statusInterface.delete(status);
-//		statusService.saveStatus(status);
-//		return HOME;
-//	}
+	@GetMapping("/delete/{iddelete}")
+	public String delete(@PathVariable("iddelete") Integer id) {
+		statusService.deleteStatus(id);
+		return HOME;
+	}
 }

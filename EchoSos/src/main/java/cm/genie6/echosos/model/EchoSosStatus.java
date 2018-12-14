@@ -2,14 +2,18 @@ package cm.genie6.echosos.model;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +30,8 @@ public class EchoSosStatus {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_account", name = "ownerstatus")
 	private EchoSosAccount ownerstatus;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "statusowner")
+	private List<EchoSosComment> comments = new ArrayList<EchoSosComment>();
 
 	public EchoSosStatus() {
 	}
@@ -89,6 +95,14 @@ public class EchoSosStatus {
 		this.view = view;
 	}
 
+	public List<EchoSosComment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<EchoSosComment> comments) {
+		this.comments = comments;
+	}
+
 	public static String addDate() {
 		Date date = new Date();
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
@@ -104,7 +118,7 @@ public class EchoSosStatus {
 			love = love + 0;
 		}
 	}
-	
+
 	public void incrementview() {
 		EchoSosStatus sts = new EchoSosStatus();
 		sts.getView();

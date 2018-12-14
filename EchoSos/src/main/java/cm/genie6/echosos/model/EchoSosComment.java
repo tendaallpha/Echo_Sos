@@ -21,16 +21,21 @@ public class EchoSosComment {
 	@ManyToOne
 	@JoinColumn(referencedColumnName = "id_account", name = "userowner")
 	private EchoSosAccount userowner;
+	@ManyToOne
+	@JoinColumn(referencedColumnName = "idstatus", name = "statusowner")
+	private EchoSosStatus statusowner;
 
 	public EchoSosComment() {
 	}
 
-	public EchoSosComment(Integer id_comment, String text, EchoSosArticle propritaire, EchoSosAccount userowner) {
+	public EchoSosComment(Integer id_comment, String text, EchoSosArticle propritaire, EchoSosAccount userowner,
+			EchoSosStatus statusowner) {
 		super();
 		this.id_comment = id_comment;
 		this.text = text;
 		this.propritaire = propritaire;
 		this.userowner = userowner;
+		this.statusowner = statusowner;
 	}
 
 	public Integer getId_comment() {
@@ -63,6 +68,14 @@ public class EchoSosComment {
 
 	public void setUserowner(EchoSosAccount userowner) {
 		this.userowner = userowner;
+	}
+
+	public EchoSosStatus getStatusowner() {
+		return statusowner;
+	}
+
+	public void setStatusowner(EchoSosStatus statusowner) {
+		this.statusowner = statusowner;
 	}
 
 }

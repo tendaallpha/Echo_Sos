@@ -41,7 +41,7 @@ public class EchoSosStatusService {
 		return statusInterface.findById(id).get();
 	}
 	public void deleteStatus(Integer id) {
-		EchoSosStatus status = new EchoSosStatus();
+		statusInterface.deleteById(id);
 		
 	}
 }
