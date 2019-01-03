@@ -95,7 +95,7 @@
 					<i class="fa fa-search"></i>
 				</button></li>
 			<!-- Home menu -->
-			<a class="app-nav__item" th:href="@{home}"><i
+			<a class="app-nav__item" th:href="@{/home}"><i
 				class="app-menu__icon fa fa-home fa-2x"></i></a>
 			<!--Notification Menu-->
 			<li class="dropdown"><a class="app-nav__item" href="#"
@@ -186,11 +186,14 @@
 	<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
 	<aside class="app-sidebar">
 		<div class="app-sidebar__user">
-			<a href="selfpage"> <img class="app-sidebar__user-avatar"
-				width="60px" height="60px"
+			<a th:href="@{/selfpage/{page}(page=${user.id_account})}"> <img
+				class="app-sidebar__user-avatar" width="60px" height="60px"
 				th:src="@{'/profileImages/'+${user.id_account}}" alt="User Image"></a>
 			<div>
-				<p class="app-sidebar__user-name" th:text="${user.plastname}"></p>
+
+				<p class="app-sidebar__user-name" th:if="${user.cname} == null">
+					<b class="app-sidebar__user-name" th:text="${user.plastname}"></b>
+				</p>
 				<p class="app-sidebar__user-designation" th:text="${user.status}"></p>
 			</div>
 		</div>
@@ -257,9 +260,11 @@
 									class="fa fa-pencil "></i> Create your Status</b></td>
 						</tr>
 						<tr>
-							<td><img class="app-sidebar__user-avatar" width="40px"
-								height="40px" th:src="@{'/profileImages/'+${user.id_account}}"
-								alt="user image"></td>
+							<td><a
+								th:href="@{/selfpage/{page}(page=${user.id_account})}"><img
+									class="app-sidebar__user-avatar" width="40px" height="40px"
+									th:src="@{'/profileImages/'+${user.id_account}}"
+									alt="user image"> </a></td>
 							<td><input class="alert alert-white"
 								style="padding-top: 10px; font-family: sans-serif; width: 375px; font-size: 14px; font-weight: bold; border: none;"
 								name="stscomment" placeholder="Edit your Status"
@@ -292,8 +297,9 @@
 		<div class="col-md-6">
 			<div class="tile-article-allpha">
 				<div class="bg-dark">
-					<a> <img
-						th:src="@{'/profileImages/'+${sts.ownerstatus.id_account}}"
+					<a
+						th:href="@{/selfpage/{page}(page=${sts.ownerstatus.id_account})}">
+						<img th:src="@{'/profileImages/'+${sts.ownerstatus.id_account}}"
 						class="app-sidebar__user-avatar mr-2 ml-2" width="40px"
 						height="40px"> <b style="font-size: 15px;"
 						class="text-white" th:text="${sts.ownerstatus.plastname}"></b>
@@ -363,12 +369,12 @@
 			<div class="tile-article-allpha">
 				<div class="bg-white">
 					<a
-						th:href="@{/selfpage.html/{id}(id=${article.ownerarticle.id_account})}">
+						th:href="@{/selfpage/{page}(page=${article.ownerarticle.id_account})}">
 						<img
 						th:src="@{'/profileImages/'+${article.ownerarticle.id_account}}"
 						class="app-sidebar__user-avatar mr-2 ml-2" width="40px"
 						height="40px"> <b style="font-size: 15px;"
-						class="text-primary" th:text="${article.ownerarticle.plastname}"></b>
+						class="text-primary" th:text="${article.ownerarticle.cname}"></b>
 					</a>
 					<div class="content bg-light">
 						<b class="mb-0 ml-3 "> <a
@@ -499,10 +505,7 @@
 			</div>
 			<div class="card-footer text-muted">
 				<button style="border-radius: 2px;" class="btn text-info">
-					i know him <i class="fa fa-thumbs-o-up fa-lg"></i>
-				</button>
-				<button style="border-radius: 2px;" class="btn text-info">
-					i visited him <i class="fa fa-car fa-lg"></i>
+					<i class="fa fa-thumbs-o-up fa-lg"></i> I know this center
 				</button>
 			</div>
 		</div>
@@ -533,39 +536,42 @@
 		</div>
 		<div class="chat">
 			<div class="chat-header">
-				<span id="name"><b class="text-light"
-					th:if="${center} != null" th:text="${center.cname}"></b></span> <img
-					th:src="@{/fonts/croix.png}" class="chat-header-closer"
+				<span id="name"><i class="fa fa-circle text-success mr-2"></i>
+					<b class="text-dark" th:if="${center} != null"
+					th:text="${center.cname}"></b> <b th:if="${center} != null"> <b
+						th:if="${center.cname} == null" th:text="${center.plastname}">
+					</b></b> </span> <img th:src="@{/fonts/croix.png}" class="chat-header-closer"
 					alt="FERMER" />
 			</div>
 			<div class="chat-content">
 				<div class="chat-content-msg">
-
-					<div class="" th:if="${center} != null" th:each="mail: ${mails}">
-						<div class="receiver"
-							th:if="${mail.sendermails.id_account == center.id_account}">
-							<img width="7%" th:src="@{'/profileImages/'+${center.id_account}}">
-							<p class="" th:text="${mail.content}"></p>
-						</div>
-						<div class="cender"
-							th:if="${mail.sendermails.id_account == user.id_account}">
-							<img width="7%" th:src="@{'/profileImages/'+${user.id_account}}">
-							<p class="" th:text="${mail.content}"></p>
+					<div class="messanger">
+						<div class="messages" th:if="${center} != null"
+							th:each="mail: ${mails}">
+							<div class="message"
+								th:if="${mail.sendermails.id_account == center.id_account}">
+								<img width="35px" height="35px"
+									th:src="@{'/profileImages/'+${center.id_account}}">
+								<p class="info" th:text="${mail.content}"></p>
+							</div>
+							<div class="message me"
+								th:if="${mail.sendermails.id_account == user.id_account}">
+								<p class="info mr-3" th:text="${mail.content}"></p>
+							</div>
 						</div>
 					</div>
-
 				</div>
-			</div>
-			<div class="chat-footer">
-				<form method="post" th:action="@{/sentmail}">
-					<input class="alert alert-white"
-						style="font-family: sans-serif; width: 100%; font-size: 13px; font-weight: bold;"
-						name="content" placeholder="write your message"
-						required="required" autocomplete="off"> <input
-						type="number" name="idreceiver"
-						th:value="${#httpServletRequest.getParameter('block')}" hidden="">
-					<input type="submit" value="send" hidden="">
-				</form>
+				<div class="chat-footer">
+					<form method="post" th:action="@{/sentmail}">
+						<input class="alert alert-white"
+							style="font-family: sans-serif; width: 100%; font-size: 13px; font-weight: bold;"
+							name="content" placeholder="write your message"
+							required="required" autocomplete="off"> <input
+							type="number" name="idreceiver"
+							th:value="${#httpServletRequest.getParameter('block')}" hidden="">
+						<input type="submit" value="send" hidden="">
+					</form>
+				</div>
 			</div>
 		</div>
 	</aside>
@@ -582,8 +588,9 @@
 						height="35px" th:src="@{'/profileImages/'+${act.id_account}}"></td>
 					<td><a style="padding-top: 2px;" class="wechat text-muted"
 						th:href="@{chatwith/{idreceiver}(idreceiver=${act.id_account})}">
-							<b th:text="${(act.cname)}"></b> <input hidden="" id="block"
-							type="text"
+							<b th:text="${(act.cname)}"></b> <b th:if="${act.cname} == null">
+								<b th:text="${act.plastname}"></b>
+						</b> <input hidden="" id="block" type="text"
 							th:value="${#httpServletRequest.getParameter('block')}">
 					</a></td>
 					<td><i class="fa fa-user fa-lg"></i></td>

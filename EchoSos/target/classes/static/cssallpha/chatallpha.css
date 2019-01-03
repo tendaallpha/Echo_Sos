@@ -1,6 +1,6 @@
 .chat{
 	position: absolute;
-	color:white;
+	color:black;
 	bottom: 0;
 	right: 2px;
 	width: 250px;
@@ -17,7 +17,7 @@
 }
 
 .chat-header{
-	background-color: #009688;
+	background-color: #ccc;
 	font-weight: bold;
 	cursor: pointer;
 	position: relative;
@@ -54,18 +54,26 @@
 
 .chat-header-closer{
 	float: right;
-	border: 2px solid #009688;
+	border: 2px solid #ccc;
 	padding-left: 3px;
 	margin: 0 0 0 0;
 }
 
-.chat-bot{
-	color: orange;
-	font-weight: bold;
+.sender{
+	background-position:right;
+	text-align:right;
+	position:relative;
+	color: white;
+	vertical-align:middle;
+	border-radius:5px;
+	padding:1px;
+	padding-right:5px;
+	
+	background-color: #009688;
 }
 
 .chat-username{
-	color: #000;
+	color: black;
 	font-weight: bold;
 }
 

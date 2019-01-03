@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
-<title>Personal Page</title>
+<title>personal page</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,9 +11,10 @@
 <!-- Font-icon css-->
 <link rel="stylesheet" type="text/css"
 	th:href="@{/css/font-awesome.min.css}">
-<!-- 	button more -->
+<!-- 	button more and Chat -->
 <script type="text/javascript" th:src="@{/js/more.js}"></script>
 <link rel="stylesheet" type="text/css" th:href="@{/css/more.css}">
+<link rel="stylesheet" type="text/css" href="cssallpha/chatallpha.css">
 </head>
 <body class="app sidebar-mini rtl">
 
@@ -94,7 +95,7 @@
 					<i class="fa fa-search"></i>
 				</button></li>
 			<!-- Home menu -->
-			<a class="app-nav__item" th:href="@{home}"><i
+			<a class="app-nav__item" th:href="@{/home}"><i
 				class="app-menu__icon fa fa-home fa-2x"></i></a>
 			<!--Notification Menu-->
 			<li class="dropdown"><a class="app-nav__item" href="#"
@@ -169,7 +170,7 @@
 			<!-- User Menu-->
 			<li class="dropdown"><a class="app-nav__item" href="#"
 				data-toggle="dropdown" aria-label="Open Profile Menu"><i
-					class="fa fa-user fa-lg"></i></a>
+					class="fa fa-chevron-circle-down fa-lg"></i></a>
 				<ul class="dropdown-menu settings-menu dropdown-menu-right">
 					<li><a class="dropdown-item" href="page-user.html"><i
 							class="fa fa-cog fa-lg"></i> Settings</a></li>
@@ -177,7 +178,7 @@
 							class="fa fa-user fa-lg"></i> Profile</a></li>
 					<li><a class="dropdown-item"
 						th:href="@{/authentification?logout}"><i
-							class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+							class="fa fa-power-off fa-lg"></i> Disconnect</a></li>
 				</ul></li>
 		</ul>
 	</header>
@@ -213,29 +214,25 @@
 					class="app-menu__label">DDA</span>
 			</a></li>
 			<li class="treeview"><a class="app-menu__item"
-				th:href="@{/getgallery}"><i class="app-menu__icon fa fa-folder"></i><span
-					class="app-menu__label">ORPHANAGE LIST</span></a></li>
+				th:href="@{/getgallery}" hidden=""><i
+					class="app-menu__icon fa fa-folder"></i><span
+					class="app-menu__label">PHOTO</span></a></li>
 			<li class="treeview"><a class="app-menu__item" href="message">
-					<i class="app-menu__icon fa fa-envelope-o"></i> <span
+					<i class="app-menu__icon fa fa-money"></i> <span
 					class="app-menu__label">PARTICIPATION PAYMENT</span>
 			</a></li>
 			<li class="treeview is-expanded"><a class="app-menu__item"
 				th:href="@{/sponsor.html}"> <i
-					class="app-menu__icon fa fa-child"></i> <span
-					class="app-menu__label">SPONSOR LIST</span></a></li>
-			<li class="treeview"><a class="app-menu__item"
-				th:href="@{/listofcenters.html}"> <i
-					class="app-menu__icon fa fa-envelope-o"></i> <span
-					class="app-menu__label">MY MAILS</span>
-			</a></li>
+					class="app-menu__icon fa fa-users"></i> <span
+					class="app-menu__label">SPONSORS</span></a></li>
 			<li><a class="app-menu__item" th:href="@{/childrenlist.html}">
-					<i class="app-menu__icon fa fa-list"></i> <span
-					class="app-menu__label">CHILDREN LIST</span>
+					<i class="app-menu__icon fa fa-user-plus"></i> <span
+					class="app-menu__label">ADD CHILDREN</span>
 			</a></li>
 			<li class="treeview"><a class="app-menu__item"
 				th:href="@{/orphanageList}"> <i
 					class="app-menu__icon fa fa-home fa-1x"></i><span
-					class="app-menu__label">ORPHANAGE LIST</span></a></li>
+					class="app-menu__label">ORPHANAGE AVAILABLE</span></a></li>
 			<li class="treeview"><a class="app-menu__item"
 				href="charts.html"><i class="app-menu__icon fa fa-question"></i><span
 					class="app-menu__label">SUGGESTION</span></a></li>
@@ -248,23 +245,23 @@
 	</aside>
 
 	<main class="app-content">
-	<section id="showcase">
-		<div class="bg-image"></div>
-		<table>
-			<tr>
-				<td><img th:src="@{/fonts/manProfile.jpg}"/> <br> <b class="" style="color: black; margin-left: 30px;">Promotor</b></td>
-				<td><b style="font-size: 16px; margin-top: 30px;" class="ml-2 mt-4 text-dark">User Name</b> <br> <a style="border-color: gray;" class="btn btn-outline-secondary mt-2 ml-2 mb-1"><i
-						class="icon fa fa-camera ml-2"></i>modify profile</a></td>
-			</tr>
-		</table>
-	</section>
 	<div class="row">
+		<div class="col-md-12">
+			<section id="showcase">
+				<img class="bg-image" th:src="@{/fonts/labc.jpg}" /> <img
+					th:src="@{'/profileImages/'+${page.id_account}}" id="imgprofile" />
+			</section>
+			<br>
+		</div>
+	</div>
 
+	<div class="row">
 		<div class="col-md-5">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="tile-article-allpha">
-						<a class="btn btn-cyan"><i class="icon fa fa-list"></i>
+						<a th:href="@{/cplanning/{page}(page=${page.id_account})}" 
+						class="btn btn-cyan"><i class="icon fa fa-list"></i>
 							Planning</a> <a class="btn btn-cyan"><i class="icon fa fa-photo"></i>
 							Photos</a>
 					</div>
@@ -285,23 +282,23 @@
 								<table>
 									<tr>
 										<td><p style="font-size: 14px; font-weight: bold;">Name:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.cname}"></p></td>
 									</tr>
 									<tr>
 										<td><p style="font-size: 14px; font-weight: bold;">City:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.ccity}"></p></td>
 									</tr>
 									<tr>
 										<td><p style="font-size: 14px; font-weight: bold;">Birthday:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.ccreatingdate}"></p></td>
 									</tr>
 									<tr>
 										<td><p style="font-size: 14px; font-weight: bold;">Country:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.ccountry}"></p></td>
 									</tr>
 									<tr>
-										<td><p style="font-size: 14px; font-weight: bold;">Slogan:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 14px; font-weight: bold;"> government approval:</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.cvalidation}"></p></td>
 									</tr>
 								</table>
 							</div>
@@ -318,32 +315,27 @@
 							<div class="card-body">
 								<table class="table-responsive">
 									<tr>
-										<td><p style="font-size: 14px; font-weight: bold;">Name:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
-									</tr>
-									<tr>
 										<td><p style="font-size: 14px; font-weight: bold;">First
 												Name:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.pfirstname}"></p></td>
 									</tr>
 									<tr>
 										<td><p style="font-size: 14px; font-weight: bold;">Last
 												Name:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.plastname}"></p></td>
 									</tr>
 									<tr>
 										<td><p style="font-size: 14px; font-weight: bold;">Nationality:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.pnationality}"></p></td>
 									</tr>
 									<tr>
 										<td><p style="font-size: 14px; font-weight: bold;">Sex:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.psex}"></p></td>
 									</tr>
 									<tr>
 										<td><p style="font-size: 14px; font-weight: bold;">Profession:</p></td>
-										<td><p style="font-size: 13px;">Empty</p></td>
+										<td><p style="font-size: 13px;" th:text="${page.pcni}"></p></td>
 									</tr>
-
 								</table>
 							</div>
 							<div class="card-footer text-muted">
@@ -354,42 +346,9 @@
 					<p>
 					<div class="bs-component">
 						<div class="card">
-							<h4 class="card-header bg-primary text-white">Photos</h4>
+							<h4 class="card-header bg-primary text-white">Center history</h4>
 							<div class="card-body">
-								<table class="table-responsive">
-									<tr>
-										<td><img class="" width="100px" height="60px"
-											th:src="@{/fonts/2.jpg}"></td>
-										<td><img class="" width="100px" height="60px"
-											th:src="@{/fonts/3.jpg}"></td>
-										<td><img class="" width="90px" height="60px"
-											th:src="@{/fonts/2.jpg}"></td>
-									</tr>
-									<tr>
-										<td><img class="" width="100px" height="60px"
-											th:src="@{/fonts/2.jpg}"></td>
-										<td><img class="" width="100px" height="60px"
-											th:src="@{/fonts/3.jpg}"></td>
-										<td><img class="" width="90px" height="60px"
-											th:src="@{/fonts/2.jpg}"></td>
-									</tr>
-									<tr>
-										<td><img class="" width="100px" height="60px"
-											th:src="@{/fonts/2.jpg}"></td>
-										<td><img class="" width="100px" height="60px"
-											th:src="@{/fonts/3.jpg}"></td>
-										<td><img class="" width="90px" height="60px"
-											th:src="@{/fonts/2.jpg}"></td>
-									</tr>
-									<tr>
-										<td><img class="" width="100px" height="60px"
-											th:src="@{/fonts/2.jpg}"></td>
-										<td><img class="" width="100px" height="60px"
-											th:src="@{/fonts/3.jpg}"></td>
-										<td><img class="" width="90px" height="60px"
-											th:src="@{/fonts/2.jpg}"></td>
-									</tr>
-								</table>
+							<p th:text="${page.chistory}"></p>
 							</div>
 						</div>
 					</div>
@@ -398,7 +357,6 @@
 		</div>
 
 		<div class="col-md-7">
-
 			<div class="tile-article-allpha">
 				<div class="bg-light">
 					<table class="table-responsive">
@@ -406,7 +364,7 @@
 							<td><img class="ml-2" width="40px" height="40px"
 								th:src="@{/fonts/house.png}" alt="user image"></td>
 							<td><b style="margin: 15px; font-size: 15px;"
-								class="text-dark">The Children of <b>La Bonne Case</b> wish
+								class="text-dark">The Children of <b th:text="${page.cname}"></b> wish
 									you welcome in thier Page
 							</b></td>
 						</tr>
@@ -414,38 +372,220 @@
 
 				</div>
 				<div class="bg-white">
-					<a style="border-color: gray;" class="btn btn-light mt-2 ml-2 mb-1"><i
-						class="icon fa fa-edit ml-2"></i>Complete my informations</a> <a
-						style="border-color: gray;" class="btn btn-light mt-2 ml-2 mb-1"><i
-						class="icon fa fa-pencil ml-2"></i>write my story</a>
+					<a th:href="@{/completeform}" style="border-color: gray;" class="btn btn-light mt-2 ml-2 mb-1"><i
+						class="icon fa fa-edit ml-2"></i>Complete my informations</a>  <a
+						class="btn btn-info mt-2 ml-2 mb-1"><i
+						class="icon fa fa-thumbs-o-up ml-2"></i>I know this center</a>
 				</div>
 			</div>
 
 			<div class="row">
-			<div class="col-md-12">
+				<div class="col-md-12">
+					<div class="tile-article-allpha">
+						<div class="bg-primary">
+							<b style="margin-left: 5px; font-size: 15px;" class="text-white">
+								<i class="icon fa fa-globe fa-lg"></i> Publications
+							</b>
+						</div>
+						<div class="bg-white">
+							
+							
+							<div class="row" th:each="article: ${articles}"
+		style="font-family: sans-serif;">
+		<div class="col-md-12">
 			<div class="tile-article-allpha">
-				<div class="bg-primary">
-					<b style="margin-left: 5px; font-size: 15px;" class="text-white">
-						<i class="icon fa fa-globe fa-lg"></i>  Publications </b>
-				</div>
 				<div class="bg-white">
-					<p class="ml-2" style="font-family: sans-serif; font-size: 13px;">
-						Article List...</p>
+					<a
+						th:href="@{/selfpage/{page}(page=${article.ownerarticle.id_account})}">
+						<img
+						th:src="@{'/profileImages/'+${article.ownerarticle.id_account}}"
+						class="app-sidebar__user-avatar mr-2 ml-2" width="40px"
+						height="40px"> <b style="font-size: 15px;"
+						class="text-primary" th:text="${article.ownerarticle.cname}"></b>
+					</a>
+					<div class="content bg-light">
+						<b class="mb-0 ml-3 "> <a
+							style="font-size: 12px; font-family: arial;" class="text-dark">
+								Article Publish the <b th:text="${article.date}"></b>
+						</a> <a style="font-size: 12px;" class="text-info ml-4"> <i
+								class="icon fa fa-thumbs-o-up"></i> <b class="ml-2"
+								th:text="${article.love}"></b>
+						</a> <a class="ml-4 text-secondary"> <i
+								class="fa fa-fw fa-lg fa-comment-o"></i> <b class="ml-2"
+								th:text="${article.comments.size()}"></b>
+						</a> <a style="font-size: 12px;" class=" ml-4 text-primary"> <i
+								class="fa fa-fw fa-lg fa-eye"></i> <b class="ml-2"></b>
+						</a>
+						</b>
+					</div>
+				</div>
 
+				<div th:switch="${article.color}">
+					<p th:case="'red'" style="font-size: 15px; font-weight: bold;"
+						class="tile-tile col-md-12 text-center text-light bg-danger"
+						th:text="${article.title}"></p>
+					<p th:case="'green'" style="font-size: 15px; font-weight: bold;"
+						class="tile-tile col-md-12 text-center text-light bg-primary"
+						th:text="${article.title}"></p>
+					<p th:case="'yellow'" style="font-size: 15px; font-weight: bold;"
+						class="tile-tile col-md-12 text-center text-light bg-warning"
+						th:text="${article.title}"></p>
+					<p th:case="'blue'" style="font-size: 15px; font-weight: bold;"
+						class="tile-tile col-md-12 text-center text-light bg-info"
+						th:text="${article.title}"></p>
+					<p th:case="'gray'" style="font-size: 15px; font-weight: bold;"
+						class="tile-tile col-md-12 text-center text-light bg-secondary"
+						th:text="${article.title}"></p>
+				</div>
+
+				<div class="toggle">
+					<div class="more">
+						<p style="font-size: 12px;"
+							class="tile-tile col-md-12 text-dark ml-2 mr-4"
+							th:text="${article.content}"></p>
+					</div>
+
+					<div class="less btn btn">
+						<a class="button-read-more button-read text-primary" href="#read">View
+							Article Content <i
+							class="fa fa-chevron-down text-white bg-primary"></i>
+						</a> <a class="button-read-less button-read text-danger" href="#read">Keep
+							Article Content <i class="fa fa-chevron-up"></i>
+						</a>
+					</div>
+				</div>
+
+				<hr>
+				<img th:src="@{'/uploads/'+${article.id_article}}" width="100%"
+					th:if="${article.id_article} != null">
+				<hr>
+				<p class="mb-1">
+					<a style="border-radius: 10px;"
+						th:href="@{/incrementarticlelove/{id}(id=${article.id_article})}"
+						class="btn btn-light text-info mr-1 mb-1 ml-4"> <i
+						class="fa fa-thumbs-o-up fa-3x"></i>Like
+					</a> <a style="border-radius: 10px;"
+						class="btn btn-light text-primary mr-1 mb-1 ml-4"> <i
+						class="fa fa-gift fa-3x"></i> Send Gift
+					</a>
+				</p>
+				<form class="form-control" method="post"
+					th:action="@{/commentarticle}">
+					<table>
+						<tr th:each="comment: ${article.comments}">
+							<td><img class="app-sidebar__user-avatar" width="35px"
+								height="35px"
+								th:src="@{'/profileImages/'+${comment.userowner.id_account}}"
+								alt="User Image"></td>
+							<td colspan="2">
+								<p
+									style="font-size: 12px; border-color: white; font-weight: bold; border-radius: 60px; padding-top: 2px;"
+									class="alert alert-secondary">
+									<a class="" th:text="${comment.userowner.plastname}"></a>
+									&nbsp; <b th:text="${comment.text}"></b>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3"><input name="articleid"
+								th:value="${article.id_article}" type="number" hidden="">
+								<input name="owner" th:value="${user.id_account}" type="number"
+								hidden=""></td>
+						</tr>
+						<tr>
+							<td><img class="app-sidebar__user-avatar" width="35px"
+								height="35px" th:src="@{'/profileImages/'+${user.id_account}}"></td>
+							<td><input class="alert alert-secondary"
+								style="margin-top: 5px; font-weight: bold; width: 360px; border-radius: 15px; font-family: sans-serif;"
+								name="comment" placeholder="Write your comment... "
+								required="required" autocomplete="off"> <input
+								type="submit" hidden=""></td>
+							<td></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+
+						</div>
+					</div>
 				</div>
 			</div>
-</div></div>
 		</div>
 	</div>
 	</main>
-	<!-- Essential javascripts for application to work-->
+<!-- Essential javascripts for application to work-->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 	<!-- The javascript plugin to display page loading on top-->
 	<script src="js/plugins/pace.min.js"></script>
+	<!-- 	chat javascript -->
+	<script type="text/javascript"
+		th:src="@{/jsallpha/chatallpha-1.0.1.js}"></script>
+	<script type="text/javascript" th:src="@{/jsallpha/jquery-1.10.2.js}"></script>
 	<!-- Page specific javascripts-->
+	<script type="text/javascript" src="js/plugins/bootstrap-notify.min.js"></script>
+	<script type="text/javascript" src="js/plugins/sweetalert.min.js"></script>
+	<script type="text/javascript" src="js/plugins/chart.js"></script>
+	<script type="text/javascript">
+		var data = {
+			labels : [ "January", "February", "March", "April", "May" ],
+			datasets : [ {
+				label : "My First dataset",
+				fillColor : "rgba(220,220,220,0.2)",
+				strokeColor : "rgba(220,220,220,1)",
+				pointColor : "rgba(220,220,220,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(220,220,220,1)",
+				data : [ 65, 59, 80, 81, 56 ]
+			}, {
+				label : "My Second dataset",
+				fillColor : "rgba(151,187,205,0.2)",
+				strokeColor : "rgba(151,187,205,1)",
+				pointColor : "rgba(151,187,205,1)",
+				pointStrokeColor : "#fff",
+				pointHighlightFill : "#fff",
+				pointHighlightStroke : "rgba(151,187,205,1)",
+				data : [ 28, 48, 40, 19, 86 ]
+			} ]
+		};
+		var pdata = [ {
+			value : 300,
+			color : "#46BFBD",
+			highlight : "#5AD3D1",
+			label : "Complete"
+		}, {
+			value : 50,
+			color : "#F7464A",
+			highlight : "#FF5A5E",
+			label : "In-Progress"
+		} ]
+
+		var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+		var lineChart = new Chart(ctxl).Line(data);
+
+		var ctxp = $("#pieChartDemo").get(0).getContext("2d");
+		var pieChart = new Chart(ctxp).Pie(pdata);
+	</script>
+	<!-- 	button more javascript -->
+	<script>
+		jQuery(document).ready(function() {
+			$(".more").hide();
+			jQuery('.button-read-more').click(function() {
+				$(this).closest('.less').addClass('active');
+				$(this).closest(".less").prev().stop(true).slideDown("1000");
+			});
+			jQuery('.button-read-less').click(function() {
+				$(this).closest('.less').removeClass('active');
+				$(this).closest(".less").prev().stop(true).slideUp("1000");
+			});
+		});
+	</script>
+
 	<!-- Google analytics script-->
 	<script type="text/javascript">
 		if (document.location.hostname == 'pratikborsadiya.in') {
@@ -464,5 +604,48 @@
 			ga('send', 'pageview');
 		}
 	</script>
+	<!-- script of button upload status -->
+	<script>
+		const realFileBtn = document.getElementById("real-file");
+		const customBtn = document.getElementById("custom-button");
+		const customTxt = document.getElementById("custom-text");
+
+		customBtn.addEventListener("click", function() {
+			realFileBtn.click();
+
+		});
+
+		realFileBtn.addEventListener("change", function() {
+			if (realFileBtn.value) {
+				customTxt.innerHTML = realFileBtn.value
+						.match(/[\/\\]([\w\d\s\. \-\(\)]+)$/)[1];
+			} else {
+				customTxt.innerHTML = "No File Choosen, yet.";
+			}
+		});
+	</script>
+	<script>
+		$('#demoSwal').click(function() {
+			swal({
+				title : "Are you sure?",
+				text : "You will not be able to recover this status!",
+				type : "warning",
+				showCancelButton : true,
+				confirmButtonText : "Yes, delete it!",
+				cancelButtonText : "No, cancel!",
+				closeOnConfirm : false,
+				closeOnCancel : false
+			}, function(isConfirm) {
+				if (isConfirm) {
+					swal("Deleted!", "Status deleted.", "success");
+				} else {
+					swal("Cancelled", "Status is safe :)", "error");
+				}
+			});
+		});
+	</script>
+	<!-- 	scroll page stop -->
+
+
 </body>
 </html>

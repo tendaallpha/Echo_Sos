@@ -61,6 +61,14 @@ public class EchoSosAccountService implements UserDetailsService {
 			Files.write(fileNameAndPath, files[i].getBytes());
 		}
 	}
+	public void completInfo(MultipartFile[] files, EchoSosAccount account) throws IOException {
+		account = accountInterface.save(account);
+		int id = account.getId_account();
+		for (int i = 0; i < 1; i++) {
+			Path fileNameAndPath = Paths.get(EchoSosAccountController.CENTERPROFILEDIR, id + "");
+			Files.write(fileNameAndPath, files[i].getBytes());
+		}
+	}
 
 	public void uploadGallery(MultipartFile[] files, String username) throws IOException {
 		EchoSosAccount user = getByUsername(Integer.parseInt(username));

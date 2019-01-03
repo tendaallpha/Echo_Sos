@@ -53,15 +53,19 @@
 			</column>
 			<column name="cname" type="varchar(30)" />
 			<column name="ccity" type="varchar(20)" />
+			<column name="ccountry" type="varchar(20)" />
+			<column name="cpassword" type="varchar(255)" />
 			<column name="ccreatingdate" type="varchar(20)" />
 			<column name="cphone" type="Integer" />
 			<column name="cvalidation" type="varchar(30)" />
+			<column name="pnationality" type="varchar(20)" />
 			<column name="pfirstname" type="varchar(30)" />
 			<column name="pphone" type="Integer" />
 			<column name="psex" type="varchar(20)" />
 			<column name="plastname" type="varchar(20)" />
-			<column name="cpassword" type="varchar(1000)" />
+			<column name="pcni" type="Integer" />
 			<column name="status" type="varchar(20)" />
+			<column name="chistory" type="varchar(255)" />
 		</createTable>
 
 		<!-- table of mail -->
@@ -85,7 +89,7 @@
 			<column name="birthday" type="varchar(20)" />
 			<column name="sex" type="varchar(20)" />
 			<column name="sponsored" type="varchar(15)" />
-			<column name="description" type="varchar(2000)" />
+			<column name="description" type="varchar(255)" />
 			<column name="ownerchildren" type="Integer" />
 		</createTable>
 
@@ -100,12 +104,27 @@
 			<column name="view" type="Integer" />
 			<column name="ownerstatus" type="Integer" />
 		</createTable>
+		
+		<!-- table of credibility -->
+		<createTable tableName="credibility">
+			<column name="idcredibility" type="Integer" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="know" type="int" />
+			<column name="visited" type="int" />
+			<column name="publication" type="int" />
+			<column name="ordinaryform" type="int" />
+			<column name="completion" type="int" />
+			<column name="recommandation" type="int" />
+			<column name="percentage" type="int" />
+			<column name="ownercredibility" type="Integer" />
+		</createTable>
 
 		<addForeignKeyConstraint
 			constraintName="comment_article" referencedTableName="article"
 			referencedColumnNames="id_article" baseTableName="comment"
 			baseColumnNames="propritaire" />
-			
+
 		<addForeignKeyConstraint
 			constraintName="comment_status" referencedTableName="status"
 			referencedColumnNames="idstatus" baseTableName="comment"
@@ -145,6 +164,11 @@
 			constraintName="status_account" referencedTableName="account"
 			referencedColumnNames="id_account" baseTableName="status"
 			baseColumnNames="ownerstatus" />
+
+		<addForeignKeyConstraint
+			constraintName="credibility_account" referencedTableName="account"
+			referencedColumnNames="id_account" baseTableName="credibility"
+			baseColumnNames="ownercredibility" />
 
 		<!-- <sqlFile path="echoSos1.sql" relativeToChangelogFile="true" /> -->
 	</changeSet>

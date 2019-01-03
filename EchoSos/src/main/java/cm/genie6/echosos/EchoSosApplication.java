@@ -23,8 +23,10 @@ public class EchoSosApplication {
 		filegallery.mkdir();
 		File filechildrenprofile = new File(EchoSosChildController.childrenprofile);
 		filechildrenprofile.mkdir();
-		File filestatusimg= new File(EchoSosStatusController.STATUSIMAGES);
+		File filestatusimg = new File(EchoSosStatusController.STATUSIMAGES);
 		filestatusimg.mkdir();
+		File filescprofileimg = new File(EchoSosAccountController.CENTERPROFILEDIR);
+		filescprofileimg.mkdir();
 
 		System.out.println(file.getAbsolutePath());
 

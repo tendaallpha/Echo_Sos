@@ -20,14 +20,18 @@ public class EchoSosAccount {
 	private Integer id_account;
 	private String cname;
 	private String ccity;
+	private String ccountry;
+	private String cpassword;
 	private String ccreatingdate;
 	private int cphone;
 	private String cvalidation;
-	private String psex;
-	private String plastname;
+	private String chistory;
+	private String pnationality;
 	private String pfirstname;
-	private int pphone;
-	private String cpassword;
+	private String plastname;
+	private long pphone;
+	private String psex;
+	private long pcni;
 	private String status;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ownerarticle")
 	private List<EchoSosArticle> articles = new ArrayList<EchoSosArticle>();
@@ -43,25 +47,31 @@ public class EchoSosAccount {
 	private List<EchoSosMail> receivermails = new ArrayList<EchoSosMail>();
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ownerstatus")
 	private List<EchoSosStatus> ownerstatus = new ArrayList<EchoSosStatus>();
-	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "ownercredibility")
+	private List<EchoSosCredibility> ownercredibility = new ArrayList<EchoSosCredibility>();
+
 	public EchoSosAccount() {
 	}
 
-	public EchoSosAccount(Integer id_account, String cname, String ccity, String ccreatingdate, int cphone,
-			String cvalidation, String psex, String plastname, String pfirstname, int pphone, String cpassword,
-			String status) {
+	public EchoSosAccount(Integer id_account, String cname, String ccity, String ccountry, String cpassword,
+			String ccreatingdate, int cphone, String cvalidation, String chistory, String pnationality,
+			String pfirstname, String plastname, long pphone, String psex, long pcni, String status) {
 		super();
 		this.id_account = id_account;
 		this.cname = cname;
 		this.ccity = ccity;
+		this.ccountry = ccountry;
+		this.cpassword = cpassword;
 		this.ccreatingdate = ccreatingdate;
 		this.cphone = cphone;
 		this.cvalidation = cvalidation;
-		this.psex = psex;
-		this.plastname = plastname;
+		this.chistory = chistory;
+		this.pnationality = pnationality;
 		this.pfirstname = pfirstname;
+		this.plastname = plastname;
 		this.pphone = pphone;
-		this.cpassword = cpassword;
+		this.psex = psex;
+		this.pcni = pcni;
 		this.status = status;
 	}
 
@@ -89,6 +99,22 @@ public class EchoSosAccount {
 		this.ccity = ccity;
 	}
 
+	public String getCcountry() {
+		return ccountry;
+	}
+
+	public void setCcountry(String ccountry) {
+		this.ccountry = ccountry;
+	}
+
+	public String getCpassword() {
+		return cpassword;
+	}
+
+	public void setCpassword(String cpassword) {
+		this.cpassword = cpassword;
+	}
+
 	public String getCcreatingdate() {
 		return ccreatingdate;
 	}
@@ -113,20 +139,12 @@ public class EchoSosAccount {
 		this.cvalidation = cvalidation;
 	}
 
-	public String getPsex() {
-		return psex;
+	public String getPnationality() {
+		return pnationality;
 	}
 
-	public void setPsex(String psex) {
-		this.psex = psex;
-	}
-
-	public String getPlastname() {
-		return plastname;
-	}
-
-	public void setPlastname(String plastname) {
-		this.plastname = plastname;
+	public void setPnationality(String pnationality) {
+		this.pnationality = pnationality;
 	}
 
 	public String getPfirstname() {
@@ -137,20 +155,36 @@ public class EchoSosAccount {
 		this.pfirstname = pfirstname;
 	}
 
-	public int getPphone() {
+	public String getPlastname() {
+		return plastname;
+	}
+
+	public void setPlastname(String plastname) {
+		this.plastname = plastname;
+	}
+
+	public long getPphone() {
 		return pphone;
 	}
 
-	public void setPphone(int pphone) {
+	public void setPphone(long pphone) {
 		this.pphone = pphone;
 	}
 
-	public String getCpassword() {
-		return cpassword;
+	public String getPsex() {
+		return psex;
 	}
 
-	public void setCpassword(String cpassword) {
-		this.cpassword = cpassword;
+	public void setPsex(String psex) {
+		this.psex = psex;
+	}
+
+	public long getPcni() {
+		return pcni;
+	}
+
+	public void setPcni(long pcni) {
+		this.pcni = pcni;
 	}
 
 	public String getStatus() {
@@ -161,6 +195,14 @@ public class EchoSosAccount {
 		this.status = status;
 	}
 
+	public String getChistory() {
+		return chistory;
+	}
+
+	public void setChistory(String chistory) {
+		this.chistory = chistory;
+	}
+
 	public List<EchoSosArticle> getArticles() {
 		return articles;
 	}
@@ -169,14 +211,20 @@ public class EchoSosAccount {
 		this.articles = articles;
 	}
 
-
-
-	public List<EchoSosMail> getReceivermails() {
+	public List<EchoSosMail> getSendermails() {
 		return sendermails;
 	}
 
-	public void setReceivermails(List<EchoSosMail> receivermails) {
-		this.sendermails = receivermails;
+	public void setSendermails(List<EchoSosMail> sendermails) {
+		this.sendermails = sendermails;
+	}
+
+	public List<EchoSosPlanning> getPlannings() {
+		return plannings;
+	}
+
+	public void setPlannings(List<EchoSosPlanning> plannings) {
+		this.plannings = plannings;
 	}
 
 	public List<EchoSosChild> getChildren() {
@@ -195,20 +243,28 @@ public class EchoSosAccount {
 		this.comments = comments;
 	}
 
-	public List<EchoSosMail> getReceiverermail() {
+	public List<EchoSosMail> getReceivermails() {
 		return receivermails;
 	}
 
-	public void setReceiverermail(List<EchoSosMail> receiverermail) {
-		this.receivermails = receiverermail;
+	public void setReceivermails(List<EchoSosMail> receivermails) {
+		this.receivermails = receivermails;
 	}
 
-	public List<EchoSosPlanning> getPlannings() {
-		return plannings;
+	public List<EchoSosStatus> getOwnerstatus() {
+		return ownerstatus;
 	}
 
-	public void setPlannings(List<EchoSosPlanning> plannings) {
-		this.plannings = plannings;
+	public void setOwnerstatus(List<EchoSosStatus> ownerstatus) {
+		this.ownerstatus = ownerstatus;
+	}
+
+	public List<EchoSosCredibility> getOwnercredibility() {
+		return ownercredibility;
+	}
+
+	public void setOwnercredibility(List<EchoSosCredibility> ownercredibility) {
+		this.ownercredibility = ownercredibility;
 	}
 
 }

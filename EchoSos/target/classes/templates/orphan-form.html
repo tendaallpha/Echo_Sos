@@ -43,76 +43,7 @@
 
 	<!-- Sidebar menu-->
 	<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-	<aside class="app-sidebar">
-		<div class="app-sidebar__user">
-			<img class="app-sidebar__user-avatar" src="fonts/manProfile.jpg"
-				alt="User Image">
-			<div>
-				<p class="app-sidebar__user-name">New User</p>
-				<p class="app-sidebar__user-designation">Status</p>
-			</div>
-		</div>
-		<ul class="app-menu">
-			<li><button class="app-menu__item btn-dark" disabled>
-					<i class="app-menu__icon fa fa-dashboard"></i> <span
-						class="app-menu__label">NOTIFICATIONS &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				</button></li>
-			<li class="treeview"><button class="app-menu__item btn-dark"
-					disabled="">
-					<i class="app-menu__icon fa fa-envelope"></i><span
-						class="app-menu__label">MESSAGES &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				</button></li>
-
-			<li><button class="app-menu__item btn-dark" disabled="">
-					<i class="app-menu__icon fa fa-folder"></i><span
-						class="app-menu__label">CHILDREN LIST &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				</button></li>
-			<li class="treeview is-expanded">
-				<button class="app-menu__item btn-dark" disabled>
-					<i class="app-menu__icon fa fa-child"></i><span
-						class="app-menu__label">PARRAINAGE &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>
-				</button>
-			</li>
-			<li class="treeview is-expanded">
-				<button class="app-menu__item btn-dark" disabled>
-					<i class="app-menu__icon fa fa-files-o fa-1x"></i><span
-						class="app-menu__label">RUBRICS &nbsp; &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;</span>
-				</button>
-			</li>
-			<li class="treeview"><button class="app-menu__item btn-dark"
-					disabled>
-					<i class="app-menu__icon fa fa-question"></i><span
-						class="app-menu__label">SUGGESTION &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				</button></li>
-			<li class="treeview">
-				<button class="app-menu__item btn-dark" disabled>
-					<i class="app-menu__icon fa fa-user"></i><span
-						class="app-menu__label">NEW OBJECT &nbsp; &nbsp;
-						&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span>
-				</button>
-			</li>
-			<li class="treeview"><button class="app-menu__item btn-dark"
-					disabled>
-					<i class="app-menu__icon fa fa-edit"></i> <span
-						class="app-menu__label">ADD ARTICLE &nbsp; &nbsp; &nbsp;
-						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				</button></li>
-		</ul>
-	</aside>
+	<aside class="app-sidebar"></aside>
 
 	<main class="app-content">
 	<div class="app-title">
@@ -140,7 +71,7 @@
 							<div class="form-check bg bg-primary text-light text-center">
 								<b
 									style="font-size: 15px; font-family: arial; font-weight: bold;">
-									CENTER'S INFORMATIONS </b>
+									CENTER INFORMATIONS </b>
 							</div>
 						</div>
 						<div class="form-group">
@@ -152,47 +83,17 @@
 								th:field="*{ccity}">
 						</div>
 						<div class="form-group">
-							<input class="form-control" type="date"
-								th:field="*{ccreatingdate}" placeholder="Creating Date"
-								alt="Enter the creating date">
+							<input class="form-control" type="text" placeholder="country"
+								th:field="*{ccountry}">
 						</div>
 						<div class="form-group">
-							<input class="form-control" type="text" th:field="*{cphone}"
-								placeholder="Phone's Number orange money or MTN money">
+							<label>Center Photo</label>
+							<input class="form-control" type="file" name="file">
 						</div>
 						<div class="form-group">
-							<input class="form-control" type="text" th:field="*{cvalidation}"
-								placeholder="Agrement">
+							<label>Phone Number</label> <input class="form-control"
+								type="text" th:field="*{cphone}" placeholder="Phone Number">
 						</div>
-						<div class="form-group">
-							<input type="file" name="file">
-						</div>
-						<div class="form-group">
-							<div class="form-check bg bg-primary text-light text-center">
-								<b
-									style="font-size: 15px; font-family: arial; font-weight: bold;">
-									PROMOTOR'S INFORMATIONS </b>
-							</div>
-						</div>
-						<div class="form-group">
-							<input class="form-control" type="text" placeholder="Last Name"
-								th:field="*{plastname}">
-						</div>
-						<div class="form-group">
-							<input class="form-control" type="text" placeholder="First Name"
-								th:field="*{pfirstname}">
-						</div>
-						<div class="form-group">
-							<input class="form-control" type="text" th:field="*{pphone}"
-								placeholder="CNI Number">
-						</div>
-						<div class="form-group">
-							<select class="form-control" th:field="*{psex}">
-								<option th:value="male">Male</option>
-								<option th:value="female">Female</option>
-							</select>
-						</div>
-
 						<div class="form-group">
 							<input class="form-control" type="password"
 								placeholder="confirm Password" th:field="*{cpassword}">
@@ -201,7 +102,6 @@
 							<input class="form-control" type="password"
 								placeholder="Password">
 						</div>
-						<!-- 						 account status -->
 						<div class="form-group">
 							<select class="form-control" th:field="*{status}" hidden="">
 								<option th:value="ORPHANAGE">status</option>

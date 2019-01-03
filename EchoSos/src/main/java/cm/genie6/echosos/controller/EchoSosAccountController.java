@@ -26,6 +26,7 @@ public class EchoSosAccountController {
 	@Autowired
 	private EchoSosArticleService articleService;
 	public static String profileDirectry = System.getProperty("user.dir") + "/src/main/resources/static/profileImages";
+	public static final String CENTERPROFILEDIR = System.getProperty("user.dir") + "/src/main/resources/static/centerProfiles";
 
 	@GetMapping("inscription")
 	public String getNewAccount() {
@@ -66,6 +67,16 @@ public class EchoSosAccountController {
 		model.addAttribute("orphanage", accountService.getAllOrphanage());
 		return "accounts-list";
 	}
+
+	@GetMapping("completeform")
+	public String getForm(Model model, Principal principal) {
+		String username = principal.getName();
+		EchoSosAccount user = accountService.getByUsername(Integer.parseInt(username));
+		model.addAttribute("user", user);
+		model.addAttribute("orphanaccount", new EchoSosAccount());
+		return "completeorhphanform";
+	}
+
 	@PostMapping("searching")
 	public String searchAccount(@RequestParam("search") String elements, Model model, Principal principal) {
 		String username = principal.getName();
@@ -85,6 +96,14 @@ public class EchoSosAccountController {
 
 		accountService.addAccount(files, orphanAccount);
 		return "redirect:/authentificationView";
+	}
+
+	@PostMapping("completeInfo")
+	public String completeInfo(@ModelAttribute EchoSosAccount orphanAccount,
+			@RequestParam("file") MultipartFile[] files) throws IOException {
+		
+		accountService.completInfo(files, orphanAccount);
+		return "redirect:/completeform";
 	}
 
 	@GetMapping("selfpage.html/{id}")
